@@ -14,7 +14,7 @@
 .contact-info h2 {
   font-size: 2rem;
   font-weight: 700;
-  color: #a855f7;
+  color: #7ed957;
   margin-bottom: 20px;
 }
 
@@ -46,14 +46,14 @@
   justify-content: center;
   background: rgba(0, 255, 136, 0.1);
   border-radius: 12px;
-  color: #a855f7;
+  color: #7ed957;
   flex-shrink: 0;
 }
 
 .contact-detail-item h3 {
   font-size: 1.1rem;
   font-weight: 600;
-  color: #a855f7;
+  color: #7ed957;
   margin-bottom: 5px;
 }
 
@@ -66,7 +66,7 @@
 }
 
 .contact-detail-item a:hover {
-  color: #a855f7;
+  color: #7ed957;
 }
 
 .contact-hours {
@@ -77,7 +77,7 @@
 .contact-hours h3 {
   font-size: 1.2rem;
   font-weight: 600;
-  color: #a855f7;
+  color: #7ed957;
   margin-bottom: 15px;
 }
 
@@ -99,7 +99,7 @@
 .contact-form h2 {
   font-size: 1.8rem;
   font-weight: 700;
-  color: #a855f7;
+  color: #7ed957;
   margin-bottom: 30px;
 }
 
@@ -129,7 +129,7 @@
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 10px;
-  color: #a855f7;
+  color: #7ed957;
   font-size: 1rem;
   transition: all 0.3s ease;
   font-family: 'Inter', sans-serif;
@@ -144,7 +144,7 @@
 .form-group select:focus,
 .form-group textarea:focus {
   outline: none;
-  border-color: #a855f7;
+  border-color: #7ed957;
   background: rgba(255, 255, 255, 0.08);
   box-shadow: 0 0 0 3px rgba(0, 255, 136, 0.1);
 }

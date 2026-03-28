@@ -16,7 +16,7 @@
   font-size: clamp(2.5rem, 5vw, 4rem);
   font-weight: 800;
   margin-bottom: 20px;
-  background: linear-gradient(135deg, #a855f7 0%, #a855f7 100%);
+  background: linear-gradient(135deg, #7ed957 0%, #7ed957 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -97,13 +97,13 @@
   justify-content: center;
   background: rgba(0, 255, 136, 0.1);
   border-radius: 50%;
-  color: #a855f7;
+  color: #7ed957;
 }
 
 .highlight-title {
   font-size: 1.3rem;
   font-weight: 700;
-  color: #a855f7;
+  color: #7ed957;
   margin-bottom: 10px;
 }
 
@@ -138,7 +138,7 @@
   justify-content: center;
   background: rgba(0, 255, 136, 0.1);
   border-radius: 20px;
-  color: #a855f7;
+  color: #7ed957;
   border: 2px solid rgba(0, 255, 136, 0.3);
 }
 
@@ -150,7 +150,7 @@
 .service-intro h2 {
   font-size: 2rem;
   font-weight: 700;
-  color: #a855f7;
+  color: #7ed957;
   margin-bottom: 20px;
 }
 
@@ -186,7 +186,7 @@
 }
 
 .benefit-icon {
-  color: #a855f7;
+  color: #7ed957;
   flex-shrink: 0;
 }
 

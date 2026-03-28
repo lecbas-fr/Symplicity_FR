@@ -28,7 +28,7 @@
   justify-content: center;
   background: rgba(255, 255, 255, 0.05);
   border-radius: 50%;
-  color: #a855f7;
+  color: #7ed957;
   transition: all 0.3s ease;
   border: 1px solid rgba(0, 255, 136, 0.2);
 }
@@ -64,7 +64,7 @@
   align-items: center;
   gap: 12px;
   text-decoration: none;
-  color: #a855f7;
+  color: #7ed957;
   font-weight: 700;
   font-size: 1.3rem;
   transition: all 0.3s ease;
@@ -80,7 +80,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, #a855f7 0%, #c084fc 100%);
+  background: linear-gradient(135deg, #7ed957 0%, #4dd0e1 100%);
   border-radius: 8px;
   position: relative;
   overflow: hidden;
@@ -136,13 +136,13 @@
   left: 0;
   width: 0;
   height: 2px;
-  background: linear-gradient(90deg, #a855f7 0%, #c084fc 100%);
+  background: linear-gradient(90deg, #7ed957 0%, #4dd0e1 100%);
   transition: width 0.3s ease;
 }
 
 .nav-link:hover,
 .nav-link.active {
-  color: #a855f7;
+  color: #7ed957;
 }
 
 .nav-link:hover::after,
@@ -153,8 +153,8 @@
 .btn-help {
   padding: 10px 24px;
   background: transparent;
-  color: #a855f7;
-  border: 2px solid #a855f7;
+  color: #7ed957;
+  border: 2px solid #7ed957;
   border-radius: 50px;
   font-weight: 600;
   font-size: 0.9rem;
@@ -174,14 +174,14 @@
   display: none;
   background: transparent;
   border: none;
-  color: #a855f7;
+  color: #7ed957;
   cursor: pointer;
   padding: 8px;
   transition: all 0.3s ease;
 }
 
 .mobile-menu-toggle:hover {
-  color: #a855f7;
+  color: #7ed957;
 }
 
 @media (max-width: 768px) {
