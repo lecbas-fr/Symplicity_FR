@@ -4,6 +4,13 @@
   box-sizing: border-box;
 }
 
+/* Hide Emergent badge */
+#emergent-badge {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+}
+
 .App {
   min-height: 100vh;
   background: linear-gradient(135deg, #0a0e27 0%, #1a0b2e 100%);
