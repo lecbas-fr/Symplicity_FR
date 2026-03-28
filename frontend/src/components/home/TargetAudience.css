@@ -1,0 +1,66 @@
+.target-audience-section {
+  padding: 80px 0;
+  position: relative;
+  z-index: 1;
+  text-align: center;
+}
+
+.target-label {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  margin-bottom: 50px;
+}
+
+.target-grid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+  flex-wrap: wrap;
+}
+
+.target-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #ffffff;
+  transition: all 0.3s ease;
+}
+
+.target-check {
+  color: #00ff88;
+  flex-shrink: 0;
+}
+
+.target-item:hover {
+  transform: translateX(5px);
+  color: #00ff88;
+}
+
+.target-item:hover .target-check {
+  animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+}
+
+@media (max-width: 768px) {
+  .target-grid {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .target-item {
+    font-size: 1.1rem;
+  }
+}

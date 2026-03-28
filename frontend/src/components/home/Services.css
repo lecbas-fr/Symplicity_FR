@@ -1,0 +1,110 @@
+.services-section {
+  background: linear-gradient(180deg, rgba(0, 255, 136, 0.02) 0%, transparent 100%);
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 40px;
+}
+
+.service-card {
+  padding: 50px 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.service-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #00ff88 0%, #00cc6f 100%);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(0, 255, 136, 0.3);
+  box-shadow: 0 12px 40px rgba(0, 255, 136, 0.2);
+}
+
+.service-card:hover::before {
+  transform: scaleX(1);
+}
+
+.service-icon {
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 255, 136, 0.1);
+  border-radius: 16px;
+  color: #00ff88;
+  transition: all 0.3s ease;
+}
+
+.service-card:hover .service-icon {
+  background: rgba(0, 255, 136, 0.2);
+  transform: scale(1.1) rotate(5deg);
+}
+
+.service-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+.service-description {
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.8;
+  font-size: 1rem;
+  flex: 1;
+  margin: 0;
+}
+
+.service-link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #00ff88;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  margin-top: 10px;
+}
+
+.service-link:hover {
+  gap: 12px;
+  text-shadow: 0 0 10px rgba(0, 255, 136, 0.5);
+}
+
+@media (max-width: 768px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .service-card {
+    padding: 40px 30px;
+  }
+}

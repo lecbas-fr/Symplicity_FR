@@ -1,0 +1,102 @@
+.clients-section {
+  padding: 60px 0;
+  position: relative;
+  z-index: 1;
+}
+
+.clients-label {
+  text-align: center;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  margin-bottom: 40px;
+}
+
+.carousel-container {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.carousel-container::before,
+.carousel-container::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100px;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.carousel-container::before {
+  left: 0;
+  background: linear-gradient(90deg, rgba(10, 14, 39, 1) 0%, transparent 100%);
+}
+
+.carousel-container::after {
+  right: 0;
+  background: linear-gradient(270deg, rgba(10, 14, 39, 1) 0%, transparent 100%);
+}
+
+.carousel-wrapper {
+  overflow-x: hidden;
+  cursor: grab;
+}
+
+.carousel-wrapper:active {
+  cursor: grabbing;
+}
+
+.carousel-track {
+  display: flex;
+  gap: 40px;
+  padding: 20px 0;
+}
+
+.client-logo {
+  flex: 0 0 auto;
+  width: 200px;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  padding: 20px;
+  transition: all 0.3s ease;
+}
+
+.client-logo:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(0, 255, 136, 0.2);
+  transform: translateY(-5px);
+}
+
+.client-logo img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  filter: grayscale(100%) brightness(1.2);
+  opacity: 0.7;
+  transition: all 0.3s ease;
+}
+
+.client-logo:hover img {
+  filter: grayscale(0%) brightness(1);
+  opacity: 1;
+}
+
+@media (max-width: 768px) {
+  .carousel-track {
+    gap: 20px;
+  }
+
+  .client-logo {
+    width: 150px;
+    height: 120px;
+  }
+}

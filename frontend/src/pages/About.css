@@ -1,0 +1,232 @@
+.about-page,
+.service-page {
+  position: relative;
+  min-height: 100vh;
+  padding-top: 100px;
+}
+
+.page-hero {
+  padding: 80px 0 60px;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.page-title {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 800;
+  margin-bottom: 20px;
+  background: linear-gradient(135deg, #ffffff 0%, #00ff88 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-family: 'Poppins', sans-serif;
+}
+
+.page-subtitle {
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.7);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.content-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: start;
+}
+
+.content-text {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.content-text p {
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.9;
+  font-size: 1.05rem;
+}
+
+.certification-badge {
+  margin-top: 30px;
+}
+
+.certification-badge img {
+  height: 120px;
+  width: auto;
+}
+
+.content-image {
+  position: sticky;
+  top: 120px;
+}
+
+.content-image img {
+  width: 100%;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.highlights-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  margin-top: 60px;
+}
+
+.highlight-card {
+  padding: 40px 30px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.highlight-card:hover {
+  transform: translateY(-8px);
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(0, 255, 136, 0.3);
+}
+
+.highlight-icon {
+  width: 70px;
+  height: 70px;
+  margin: 0 auto 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 255, 136, 0.1);
+  border-radius: 50%;
+  color: #00ff88;
+}
+
+.highlight-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+.highlight-description {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.text-center {
+  text-align: center;
+}
+
+@media (max-width: 1024px) {
+  .content-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .content-image {
+    position: relative;
+    top: 0;
+  }
+}
+
+.hero-icon-badge {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 255, 136, 0.1);
+  border-radius: 20px;
+  color: #00ff88;
+  border: 2px solid rgba(0, 255, 136, 0.3);
+}
+
+.service-intro {
+  padding: 50px 40px;
+  margin-bottom: 60px;
+}
+
+.service-intro h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+.service-intro p {
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.9;
+  font-size: 1.05rem;
+}
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+  margin-top: 50px;
+}
+
+.benefit-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: all 0.3s ease;
+}
+
+.benefit-item:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(0, 255, 136, 0.2);
+  transform: translateX(5px);
+}
+
+.benefit-icon {
+  color: #00ff88;
+  flex-shrink: 0;
+}
+
+.benefit-text {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.cta-section {
+  background: linear-gradient(135deg, rgba(0, 255, 136, 0.05) 0%, rgba(26, 11, 46, 0.5) 100%);
+  border-radius: 20px;
+  margin: 0 20px;
+  padding: 80px 20px;
+}
+
+@media (max-width: 768px) {
+  .about-page,
+  .service-page {
+    padding-top: 80px;
+  }
+
+  .page-hero {
+    padding: 60px 0 40px;
+  }
+
+  .highlights-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .benefits-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .service-intro {
+    padding: 40px 30px;
+  }
+
+  .cta-section {
+    padding: 60px 20px;
+    margin: 0 10px;
+  }
+}
