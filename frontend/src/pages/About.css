@@ -16,7 +16,7 @@
   font-size: clamp(2.5rem, 5vw, 4rem);
   font-weight: 800;
   margin-bottom: 20px;
-  background: linear-gradient(135deg, #ffffff 0%, #00ff88 100%);
+  background: linear-gradient(135deg, #ffffff 0%, #ffffff 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -97,7 +97,7 @@
   justify-content: center;
   background: rgba(0, 255, 136, 0.1);
   border-radius: 50%;
-  color: #00ff88;
+  color: #ffffff;
 }
 
 .highlight-title {
@@ -138,7 +138,7 @@
   justify-content: center;
   background: rgba(0, 255, 136, 0.1);
   border-radius: 20px;
-  color: #00ff88;
+  color: #ffffff;
   border: 2px solid rgba(0, 255, 136, 0.3);
 }
 
@@ -186,7 +186,7 @@
 }
 
 .benefit-icon {
-  color: #00ff88;
+  color: #ffffff;
   flex-shrink: 0;
 }
 

@@ -32,13 +32,13 @@
 }
 
 .target-check {
-  color: #00ff88;
+  color: #ffffff;
   flex-shrink: 0;
 }
 
 .target-item:hover {
   transform: translateX(5px);
-  color: #00ff88;
+  color: #ffffff;
 }
 
 .target-item:hover .target-check {
