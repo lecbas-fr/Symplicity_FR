@@ -27,18 +27,18 @@
   gap: 12px;
   font-size: 1.3rem;
   font-weight: 700;
-  color: #ffffff;
+  color: #a855f7;
   transition: all 0.3s ease;
 }
 
 .target-check {
-  color: #ffffff;
+  color: #a855f7;
   flex-shrink: 0;
 }
 
 .target-item:hover {
   transform: translateX(5px);
-  color: #ffffff;
+  color: #a855f7;
 }
 
 .target-item:hover .target-check {
