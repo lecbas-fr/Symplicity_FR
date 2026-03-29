@@ -61,7 +61,7 @@ const Header = () => {
               className="logo-symbol"
               style={{ height: '45px', width: 'auto' }}
             />
-            <span style={{ fontSize: '1.5rem', fontWeight: '700', color: '#7ed957', fontFamily: 'Poppins, sans-serif', letterSpacing: '1px' }}>symplicity</span>
+            <span style={{ fontSize: '1.5rem', fontWeight: '700', color: '#7ed957', fontFamily: 'Poppins, sans-serif', letterSpacing: '1px' }}>Symplicity</span>
           </Link>
 
           <div className={`nav-links ${isMobileMenuOpen ? 'active' : ''}`}>

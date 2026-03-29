@@ -30,7 +30,7 @@ const Footer = () => {
                 className="footer-logo-symbol"
                 style={{ height: '45px', width: 'auto' }}
               />
-              <span style={{ fontSize: '1.5rem', fontWeight: '700', color: '#7ed957', fontFamily: 'Poppins, sans-serif', letterSpacing: '1px' }}>symplicity</span>
+              <span style={{ fontSize: '1.5rem', fontWeight: '700', color: '#7ed957', fontFamily: 'Poppins, sans-serif', letterSpacing: '1px' }}>Symplicity</span>
             </div>
             <p className="footer-description">
               {companyInfo.description}
