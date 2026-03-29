@@ -1,23 +1,14 @@
 from pydantic import BaseModel, EmailStr, Field
 from typing import Optional
-from datetime import datetime
-import uuid
-
-class ContactMessage(BaseModel):
-    id: str = Field(default_factory=lambda: str(uuid.uuid4()))
-    name: str
-    email: EmailStr
-    phone: Optional[str] = None
-    company: Optional[str] = None
-    subject: str
-    message: str
-    created_at: datetime = Field(default_factory=datetime.utcnow)
-    status: str = "nouveau"  # nouveau, lu, traité
 
 class ContactMessageCreate(BaseModel):
-    name: str
+    name: str = Field(..., min_length=1, max_length=100)
     email: EmailStr
-    phone: Optional[str] = None
-    company: Optional[str] = None
-    subject: str
+    phone: Optional[str] = Field(None, max_length=20)
+    company: Optional[str] = Field(None, max_length=100)
+    subject: str = Field(..., min_length=1, max_length=200)
+    message: str = Field(..., min_length=1, max_length=2000)
+
+class ContactResponse(BaseModel):
+    success: bool
     message: str
