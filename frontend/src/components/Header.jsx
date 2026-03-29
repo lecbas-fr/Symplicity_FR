@@ -55,28 +55,12 @@ const Header = () => {
       <nav className="navbar">
         <div className="container nav-container">
           <Link to="/" className="logo">
-            <div className="logo-icon">
-              <svg width="40" height="40" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M30 25 Q35 20, 40 25 L50 35 Q55 40, 60 35 L70 25" stroke="url(#grad1)" strokeWidth="8" strokeLinecap="round" strokeLinejoin="round" fill="none"/>
-                <path d="M30 45 Q35 40, 40 45 L50 55 Q55 60, 60 55 L70 45" stroke="url(#grad2)" strokeWidth="8" strokeLinecap="round" strokeLinejoin="round" fill="none"/>
-                <path d="M30 65 Q35 60, 40 65 L50 75 Q55 80, 60 75 L70 65" stroke="url(#grad3)" strokeWidth="8" strokeLinecap="round" strokeLinejoin="round" fill="none"/>
-                <defs>
-                  <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
-                    <stop offset="0%" style={{stopColor: '#7ed957', stopOpacity: 1}} />
-                    <stop offset="100%" style={{stopColor: '#4dd0e1', stopOpacity: 1}} />
-                  </linearGradient>
-                  <linearGradient id="grad2" x1="0%" y1="0%" x2="100%" y2="0%">
-                    <stop offset="0%" style={{stopColor: '#7ed957', stopOpacity: 1}} />
-                    <stop offset="100%" style={{stopColor: '#4dd0e1', stopOpacity: 1}} />
-                  </linearGradient>
-                  <linearGradient id="grad3" x1="0%" y1="0%" x2="100%" y2="0%">
-                    <stop offset="0%" style={{stopColor: '#7ed957', stopOpacity: 1}} />
-                    <stop offset="100%" style={{stopColor: '#4dd0e1', stopOpacity: 1}} />
-                  </linearGradient>
-                </defs>
-              </svg>
-            </div>
-            <span className="logo-text">SYMPLICITY</span>
+            <img 
+              src="https://customer-assets.emergentagent.com/job_symplicity-preview/artifacts/zb0mnthr_Logo%20Symplicity.png" 
+              alt="Symplicity" 
+              className="logo-image"
+              style={{ height: '40px', width: 'auto' }}
+            />
           </Link>
 
           <div className={`nav-links ${isMobileMenuOpen ? 'active' : ''}`}>
