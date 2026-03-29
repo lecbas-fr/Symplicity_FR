@@ -93,16 +93,6 @@ const Contact = () => {
                     <a href={`tel:${companyInfo.phone}`}>{companyInfo.phone}</a>
                   </div>
                 </div>
-
-                <div className="contact-detail-item">
-                  <div className="contact-icon">
-                    <Mail size={24} />
-                  </div>
-                  <div>
-                    <h3>Email</h3>
-                    <a href={`mailto:${companyInfo.email}`}>{companyInfo.email}</a>
-                  </div>
-                </div>
               </div>
 
               <div className="contact-hours glass">

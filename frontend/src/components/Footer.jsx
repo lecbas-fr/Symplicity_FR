@@ -117,10 +117,6 @@ const Footer = () => {
                 <Phone size={18} />
                 <a href={`tel:${companyInfo.phone}`}>{companyInfo.phone}</a>
               </li>
-              <li>
-                <Mail size={18} />
-                <a href={`mailto:${companyInfo.email}`}>{companyInfo.email}</a>
-              </li>
             </ul>
           </div>
         </div>
