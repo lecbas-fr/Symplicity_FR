@@ -108,7 +108,8 @@ const Contact = () => {
               <div className="contact-hours glass">
                 <h3>Horaires d'ouverture</h3>
                 <p>Lundi - Vendredi : 9h00 - 18h00</p>
-                <p>Samedi - Dimanche : Fermé</p>
+                <p>Samedi : 8h00 - 12h00</p>
+                <p>Dimanche : Fermé</p>
               </div>
             </div>
 

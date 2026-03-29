@@ -130,13 +130,13 @@ const Footer = () => {
             &copy; {new Date().getFullYear()} {companyInfo.name}. Tous droits réservés.
           </p>
           <div className="footer-bottom-links">
-            <a href="#privacy" className="footer-bottom-link">
+            <a href="https://www.symplicity.fr/politique-de-confidentialite" target="_blank" rel="noopener noreferrer" className="footer-bottom-link">
               Politique de confidentialité
             </a>
-            <a href="#terms" className="footer-bottom-link">
+            <a href="https://www.symplicity.fr/mentions-legales" target="_blank" rel="noopener noreferrer" className="footer-bottom-link">
               Mentions légales
             </a>
-            <a href="#cookies" className="footer-bottom-link">
+            <a href="https://www.symplicity.fr/politique-de-confidentialite" target="_blank" rel="noopener noreferrer" className="footer-bottom-link">
               Cookies
             </a>
           </div>

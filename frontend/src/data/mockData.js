@@ -4,9 +4,9 @@ export const companyInfo = {
   name: "SYMPLICITY",
   tagline: "Services informatiques sur-mesure, créateurs de valeur pour votre entreprise",
   description: "Depuis 2007, nous fournissons des solutions, des produits informatiques et des conseils sur mesure, afin d'accompagner la croissance de nos clients au quotidien.",
-  phone: "01 XX XX XX XX",
+  phone: "01 85 450 300",
   email: "contact@symplicity.fr",
-  address: "Essonne - Ile de France"
+  address: "38 rue des Processions, 91240 Saint-Michel-Sur-Orge, FRANCE"
 };
 
 export const navigationLinks = [
