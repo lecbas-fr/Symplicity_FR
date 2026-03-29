@@ -1,5 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Mail, Phone, MapPin, Send } from 'lucide-react';
+import Turnstile from 'react-turnstile';
 import ParticleBackground from '../components/ParticleBackground';
 import SEO from '../components/SEO';
 import { companyInfo } from '../data/mockData';
@@ -9,6 +10,7 @@ import './Contact.css';
 
 const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
 const API = `${BACKEND_URL}/api`;
+const TURNSTILE_SITE_KEY = process.env.REACT_APP_TURNSTILE_SITE_KEY;
 
 const Contact = () => {
   const { toast } = useToast();
@@ -21,6 +23,8 @@ const Contact = () => {
     message: ''
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [turnstileToken, setTurnstileToken] = useState(null);
+  const turnstileRef = useRef(null);
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -33,12 +37,42 @@ const Contact = () => {
     });
   };
 
+  const handleTurnstileVerify = (token) => {
+    setTurnstileToken(token);
+  };
+
+  const handleTurnstileError = () => {
+    setTurnstileToken(null);
+    toast({
+      title: 'Erreur CAPTCHA',
+      description: 'La vérification CAPTCHA a échoué. Veuillez réessayer.',
+      variant: 'destructive'
+    });
+  };
+
+  const handleTurnstileExpire = () => {
+    setTurnstileToken(null);
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    if (!turnstileToken) {
+      toast({
+        title: 'Vérification requise',
+        description: 'Veuillez compléter la vérification CAPTCHA.',
+        variant: 'destructive'
+      });
+      return;
+    }
+
     setIsSubmitting(true);
 
     try {
-      const response = await axios.post(`${API}/contact`, formData);
+      const response = await axios.post(`${API}/contact`, {
+        ...formData,
+        turnstileToken: turnstileToken
+      });
       
       if (response.status === 200) {
         toast({
@@ -54,12 +88,19 @@ const Contact = () => {
           subject: '',
           message: ''
         });
+        
+        // Réinitialiser Turnstile
+        setTurnstileToken(null);
+        if (turnstileRef.current) {
+          turnstileRef.current.reset();
+        }
       }
     } catch (error) {
       console.error('Erreur lors de l\'envoi:', error);
+      const errorMessage = error.response?.data?.detail || 'Une erreur est survenue. Veuillez réessayer plus tard.';
       toast({
         title: 'Erreur',
-        description: 'Une erreur est survenue. Veuillez réessayer plus tard.',
+        description: errorMessage,
         variant: 'destructive'
       });
     } finally {
@@ -214,6 +255,20 @@ const Contact = () => {
                     placeholder="Décrivez votre besoin..."
                   ></textarea>
                 </div>
+
+                {TURNSTILE_SITE_KEY && TURNSTILE_SITE_KEY !== 'votre-turnstile-site-key' && (
+                  <div className="turnstile-container" style={{ display: 'flex', justifyContent: 'center', margin: '20px 0' }}>
+                    <Turnstile
+                      ref={turnstileRef}
+                      sitekey={TURNSTILE_SITE_KEY}
+                      onVerify={handleTurnstileVerify}
+                      onError={handleTurnstileError}
+                      onExpire={handleTurnstileExpire}
+                      theme="light"
+                      size="normal"
+                    />
+                  </div>
+                )}
 
                 <button type="submit" className="btn-primary" disabled={isSubmitting}>
                   {isSubmitting ? 'Envoi en cours...' : (
