@@ -27,7 +27,7 @@ const Footer = () => {
               src="https://customer-assets.emergentagent.com/job_symplicity-preview/artifacts/zb0mnthr_Logo%20Symplicity.png" 
               alt="Symplicity" 
               className="footer-logo-image"
-              style={{ height: '40px', width: 'auto' }}
+              style={{ height: '50px', width: 'auto', marginBottom: '20px' }}
             />
             <p className="footer-description">
               {companyInfo.description}
