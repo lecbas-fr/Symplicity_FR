@@ -3,7 +3,11 @@ import { Mail, Phone, MapPin, Send } from 'lucide-react';
 import ParticleBackground from '../components/ParticleBackground';
 import { companyInfo } from '../data/mockData';
 import { useToast } from '../hooks/use-toast';
+import axios from 'axios';
 import './Contact.css';
+
+const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
+const API = `${BACKEND_URL}/api`;
 
 const Contact = () => {
   const { toast } = useToast();
@@ -32,23 +36,34 @@ const Contact = () => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate form submission
-    setTimeout(() => {
-      toast({
-        title: 'Message envoyé !',
-        description: 'Nous vous recontacterons dans les plus brefs délais.',
-      });
+    try {
+      const response = await axios.post(`${API}/contact`, formData);
       
-      setFormData({
-        name: '',
-        email: '',
-        phone: '',
-        company: '',
-        subject: '',
-        message: ''
+      if (response.status === 200) {
+        toast({
+          title: 'Message envoyé !',
+          description: 'Nous vous recontacterons dans les plus brefs délais.',
+        });
+        
+        setFormData({
+          name: '',
+          email: '',
+          phone: '',
+          company: '',
+          subject: '',
+          message: ''
+        });
+      }
+    } catch (error) {
+      console.error('Erreur lors de l\'envoi:', error);
+      toast({
+        title: 'Erreur',
+        description: 'Une erreur est survenue. Veuillez réessayer plus tard.',
+        variant: 'destructive'
       });
+    } finally {
       setIsSubmitting(false);
-    }, 1500);
+    }
   };
 
   return (
