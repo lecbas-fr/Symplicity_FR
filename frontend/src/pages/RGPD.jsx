@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Shield, CheckCircle, FileText, Users, ArrowRight } from 'lucide-react';
 import ParticleBackground from '../components/ParticleBackground';
+import SEO from '../components/SEO';
 import './About.css';
 
 const RGPD = () => {
@@ -37,8 +38,15 @@ const RGPD = () => {
   ];
 
   return (
-    <div className="service-page">
-      <ParticleBackground />
+    <>
+      <SEO 
+        title="RGPD & Conformité | Symplicity - DPO Externalisé Essonne"
+        description="Mise en conformité RGPD en Essonne, Paris, Seine-et-Marne. DPO externalisé certifié, audit RGPD, accompagnement personnalisé par Symplicity."
+        keywords="RGPD Essonne, DPO externalisé, conformité RGPD Paris, audit RGPD, protection données, DPO certifié Essonne, mise en conformité"
+        url="https://www.symplicity.fr/rgpd"
+      />
+      <div className="service-page">
+        <ParticleBackground />
       
       <section className="page-hero">
         <div className="container">
@@ -103,7 +111,8 @@ const RGPD = () => {
           </Link>
         </div>
       </section>
-    </div>
+      </div>
+    </>
   );
 };
 

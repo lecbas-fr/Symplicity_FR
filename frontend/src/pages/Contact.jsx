@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Mail, Phone, MapPin, Send } from 'lucide-react';
 import ParticleBackground from '../components/ParticleBackground';
+import SEO from '../components/SEO';
 import { companyInfo } from '../data/mockData';
 import { useToast } from '../hooks/use-toast';
 import axios from 'axios';
@@ -67,8 +68,15 @@ const Contact = () => {
   };
 
   return (
-    <div className="contact-page">
-      <ParticleBackground />
+    <>
+      <SEO 
+        title="Contact | Symplicity - Expert Infogérance Essonne"
+        description="Contactez Symplicity pour vos besoins en infogérance, RGPD, cybersécurité en Essonne, Paris et Seine-et-Marne. Experts à votre écoute."
+        keywords="contact Symplicity, infogérance Essonne, audit cybersécurité, DPO Essonne, RGPD conseil, contact expert IT"
+        url="https://www.symplicity.fr/contact"
+      />
+      <div className="contact-page">
+        <ParticleBackground />
       
       <section className="page-hero">
         <div className="container">
@@ -219,7 +227,8 @@ const Contact = () => {
           </div>
         </div>
       </section>
-    </div>
+      </div>
+    </>
   );
 };
 

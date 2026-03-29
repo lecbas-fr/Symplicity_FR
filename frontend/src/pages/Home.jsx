@@ -8,6 +8,7 @@ import Stats from '../components/home/Stats';
 import Services from '../components/home/Services';
 import TargetAudience from '../components/home/TargetAudience';
 import Testimonials from '../components/home/Testimonials';
+import SEO from '../components/SEO';
 import './Home.css';
 
 const Home = () => {
@@ -16,17 +17,25 @@ const Home = () => {
   }, []);
 
   return (
-    <div className="home-page">
-      <ParticleBackground />
-      <Hero />
-      <ClientsCarousel />
-      <About />
-      <Certifications />
-      <Stats />
-      <Services />
-      <TargetAudience />
-      <Testimonials />
-    </div>
+    <>
+      <SEO 
+        title="Symplicity | infogérance en Essonne et Ile de France"
+        description="Symplicity | Infogérance - RGPD - Cybersécurité | Essonne - Paris - Seine et Marne. Services informatiques sur-mesure, créateurs de valeur pour votre entreprise depuis 2007."
+        keywords="infogérance Essonne, RGPD Paris, cybersécurité Ile de France, services informatiques TPE PME, DPO, protection données, infogérance Seine et Marne"
+        url="https://www.symplicity.fr"
+      />
+      <div className="home-page">
+        <ParticleBackground />
+        <Hero />
+        <ClientsCarousel />
+        <About />
+        <Certifications />
+        <Stats />
+        <Services />
+        <TargetAudience />
+        <Testimonials />
+      </div>
+    </>
   );
 };
 

@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Server, CheckCircle, HardDrive, Cloud, Headphones, Wrench, ArrowRight } from 'lucide-react';
 import ParticleBackground from '../components/ParticleBackground';
+import SEO from '../components/SEO';
 import './About.css';
 
 const Infogerance = () => {
@@ -42,8 +43,15 @@ const Infogerance = () => {
   ];
 
   return (
-    <div className="service-page">
-      <ParticleBackground />
+    <>
+      <SEO 
+        title="Infogérance | Symplicity - Gestion IT Externalisée Essonne"
+        description="Infogérance informatique Essonne, Paris, Seine-et-Marne. Administration parc IT, support 24/7, solutions cloud pour TPE/PME par Symplicity."
+        keywords="infogérance Essonne, gestion parc informatique, maintenance IT, support technique, infogérance TPE PME Paris, solutions cloud Essonne"
+        url="https://www.symplicity.fr/infogerance"
+      />
+      <div className="service-page">
+        <ParticleBackground />
       
       <section className="page-hero">
         <div className="container">
@@ -108,7 +116,8 @@ const Infogerance = () => {
           </Link>
         </div>
       </section>
-    </div>
+      </div>
+    </>
   );
 };
 

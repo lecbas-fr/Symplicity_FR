@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Lock, CheckCircle, Shield, AlertTriangle, Search, UserCheck, ArrowRight } from 'lucide-react';
 import ParticleBackground from '../components/ParticleBackground';
+import SEO from '../components/SEO';
 import './About.css';
 
 const Cybersecurity = () => {
@@ -42,8 +43,15 @@ const Cybersecurity = () => {
   ];
 
   return (
-    <div className="service-page">
-      <ParticleBackground />
+    <>
+      <SEO 
+        title="Cybersécurité | Symplicity - Expert Sécurité IT Essonne"
+        description="Protection cybersécurité Essonne, Paris, Seine-et-Marne. Audit sécurité IT, gestion incidents cyber. Experts ExpertCyber labellisés AFNOR."
+        keywords="cybersécurité Essonne, audit sécurité IT, ExpertCyber AFNOR, cybermalveillance, protection cyber Paris, sécurité informatique TPE PME"
+        url="https://www.symplicity.fr/cybersecurite"
+      />
+      <div className="service-page">
+        <ParticleBackground />
       
       <section className="page-hero">
         <div className="container">
@@ -113,7 +121,8 @@ const Cybersecurity = () => {
           </Link>
         </div>
       </section>
-    </div>
+      </div>
+    </>
   );
 };
 
