@@ -23,12 +23,15 @@ const Footer = () => {
       <div className="container">
         <div className="footer-content">
           <div className="footer-column">
-            <img 
-              src="https://customer-assets.emergentagent.com/job_symplicity-preview/artifacts/zb0mnthr_Logo%20Symplicity.png" 
-              alt="Symplicity" 
-              className="footer-logo-image"
-              style={{ height: '50px', width: 'auto', marginBottom: '20px' }}
-            />
+            <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '20px' }}>
+              <img 
+                src="https://customer-assets.emergentagent.com/job_symplicity-preview/artifacts/38ekfx2a_Symbole_SWS_d%C3%A9grad%C3%A9.png" 
+                alt="Symplicity Symbol" 
+                className="footer-logo-symbol"
+                style={{ height: '45px', width: 'auto' }}
+              />
+              <span style={{ fontSize: '1.5rem', fontWeight: '700', color: '#7ed957', fontFamily: 'Poppins, sans-serif', letterSpacing: '1px' }}>symplicity</span>
+            </div>
             <p className="footer-description">
               {companyInfo.description}
             </p>

@@ -54,13 +54,14 @@ const Header = () => {
 
       <nav className="navbar">
         <div className="container nav-container">
-          <Link to="/" className="logo">
+          <Link to="/" className="logo" style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
             <img 
-              src="https://customer-assets.emergentagent.com/job_symplicity-preview/artifacts/zb0mnthr_Logo%20Symplicity.png" 
-              alt="Symplicity" 
-              className="logo-image"
-              style={{ height: '50px', width: 'auto' }}
+              src="https://customer-assets.emergentagent.com/job_symplicity-preview/artifacts/38ekfx2a_Symbole_SWS_d%C3%A9grad%C3%A9.png" 
+              alt="Symplicity Symbol" 
+              className="logo-symbol"
+              style={{ height: '45px', width: 'auto' }}
             />
+            <span style={{ fontSize: '1.5rem', fontWeight: '700', color: '#7ed957', fontFamily: 'Poppins, sans-serif', letterSpacing: '1px' }}>symplicity</span>
           </Link>
 
           <div className={`nav-links ${isMobileMenuOpen ? 'active' : ''}`}>
