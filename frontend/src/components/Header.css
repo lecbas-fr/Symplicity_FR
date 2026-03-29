@@ -80,32 +80,18 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, #7ed957 0%, #4dd0e1 100%);
+  background: transparent;
   border-radius: 8px;
   position: relative;
-  overflow: hidden;
+  overflow: visible;
 }
 
 .logo-lines {
-  display: flex;
-  flex-direction: column;
-  gap: 3px;
+  display: none;
 }
 
 .logo-lines span {
-  width: 20px;
-  height: 2px;
-  background: #0a0e27;
-  border-radius: 2px;
-  transition: all 0.3s ease;
-}
-
-.logo:hover .logo-lines span:nth-child(1) {
-  transform: translateX(-3px);
-}
-
-.logo:hover .logo-lines span:nth-child(3) {
-  transform: translateX(3px);
+  display: none;
 }
 
 .logo-text {

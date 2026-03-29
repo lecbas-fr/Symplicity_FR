@@ -56,11 +56,11 @@ const Header = () => {
         <div className="container nav-container">
           <Link to="/" className="logo">
             <div className="logo-icon">
-              <div className="logo-lines">
-                <span></span>
-                <span></span>
-                <span></span>
-              </div>
+              <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M8 10 L24 10" stroke="#7ed957" strokeWidth="3" strokeLinecap="round"/>
+                <path d="M11 17 L27 17" stroke="#7ed957" strokeWidth="3" strokeLinecap="round"/>
+                <path d="M8 24 L24 24" stroke="#7ed957" strokeWidth="3" strokeLinecap="round"/>
+              </svg>
             </div>
             <span className="logo-text">SYMPLICITY</span>
           </Link>
