@@ -10,6 +10,8 @@ import Cybersecurity from './pages/Cybersecurity';
 import Infogerance from './pages/Infogerance';
 import Contact from './pages/Contact';
 import Commitments from './pages/Commitments';
+import PrivacyPolicy from './pages/PrivacyPolicy';
+import LegalNotice from './pages/LegalNotice';
 import { Toaster } from './components/ui/toaster';
 
 function App() {
@@ -25,6 +27,8 @@ function App() {
           <Route path="/infogerance" element={<Infogerance />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/nos-engagements" element={<Commitments />} />
+          <Route path="/politique-de-confidentialite" element={<PrivacyPolicy />} />
+          <Route path="/mentions-legales" element={<LegalNotice />} />
         </Routes>
         <Footer />
         <Toaster />
