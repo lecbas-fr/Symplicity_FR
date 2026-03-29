@@ -10,12 +10,14 @@ const Hero = () => {
       <div className="hero-content">
         <div className="container">
           <div className="hero-partners">
-            {partnerLogos.map((partner) => (
-              <div key={partner.id} className="partner-badge">
-                <img src={partner.url} alt={partner.name} />
-              </div>
+            {partnerLogos.map((partner, index) => (
+              <React.Fragment key={partner.id}>
+                <div className="partner-badge">
+                  <img src={partner.url} alt={partner.name} />
+                </div>
+                {index === 0 && <span className="partner-separator">X</span>}
+              </React.Fragment>
             ))}
-            <span className="partner-separator">X</span>
           </div>
 
           <h1 className="hero-title fade-in-up">
