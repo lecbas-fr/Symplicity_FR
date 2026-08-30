@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
 import { Server, Clock, TrendingUp, ShieldCheck, Wallet, Users, Leaf } from 'lucide-react';
-import ParticleBackground from '../components/ParticleBackground';
 import SEO from '../components/SEO';
 import RichText from '../components/RichText';
 import CtaSection from '../components/CtaSection';
@@ -21,7 +20,6 @@ const Infogerance = () => {
         url="https://www.symplicity.fr/infogerance"
       />
       <div className="service-page" data-testid="infogerance-page">
-        <ParticleBackground />
 
         <section className="page-hero">
           <div className="container">

@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react';
-import ParticleBackground from '../components/ParticleBackground';
 import SEO from '../components/SEO';
 import RichText from '../components/RichText';
 import { privacyPage } from '../data/siteContent';
@@ -16,7 +15,6 @@ const PrivacyPolicy = () => {
         url="https://www.symplicity.fr/politique-de-confidentialite"
       />
       <div className="service-page" data-testid="privacy-page">
-        <ParticleBackground />
 
         <section className="page-hero">
           <div className="container">

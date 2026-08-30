@@ -75,15 +75,16 @@ async def create_contact_message(
         # Envoyer l'email en arrière-plan
         background_tasks.add_task(
             email_service.send_contact_email,
-            name=message.name,
+            first_name=message.first_name,
+            last_name=message.last_name,
             email=message.email,
             phone=message.phone or "",
             company=message.company or "",
-            subject=message.subject,
+            position=message.position or "",
             message=message.message
         )
         
-        logger.info(f"Nouveau message de contact reçu de: {message.name} ({message.email})")
+        logger.info(f"Nouveau message de contact reçu de: {message.first_name} {message.last_name} ({message.email})")
         
         return ContactResponse(
             success=True,

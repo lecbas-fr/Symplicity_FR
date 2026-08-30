@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
 import { Shield, Users, Award, Target } from 'lucide-react';
-import ParticleBackground from '../components/ParticleBackground';
 import SEO from '../components/SEO';
 import RichText from '../components/RichText';
 import CtaSection from '../components/CtaSection';
@@ -27,7 +26,6 @@ const About = () => {
         url="https://www.symplicity.fr/qui-sommes-nous"
       />
       <div className="about-page" data-testid="about-page">
-        <ParticleBackground />
 
         <section className="page-hero">
           <div className="container">

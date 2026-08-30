@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 
-export const CtaSection = ({ title, text, label = 'NOUS CONTACTER', to = '/contact', testId = 'cta-section' }) => (
+export const CtaSection = ({ title, text, label = 'Nous contacter', to = '/contact', testId = 'cta-section' }) => (
   <section className="section" data-testid={testId}>
     <div className="container">
       <div className="cta-panel">

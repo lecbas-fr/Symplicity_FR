@@ -28,10 +28,14 @@ Demandes ultérieures :
 - `src/pages/News.jsx` + `Article.jsx` — page Actualités et article détaillé
 - `backend/routes/contact.py` — validation Turnstile puis envoi email
 
-### Charte graphique
-- Indigo profond : `--ink-950 #150a32`, `--ink-900 #1e1046`, `--ink-800 #291456`
-- Dégradé de marque : vert `--accent #a9f04e` → cyan `--accent-2 #35d2ee`
-- Typo : Poppins (titres) / Inter (texte)
+### Charte graphique (v2 — 30/08/2026, thème clair sobre)
+- Fonds : `--bg #fbfaf8` (ivoire), `--bg-alt #f3f0ea`, `--surface #ffffff`
+- Texte : `--ink #17141f`, `--body #5c5866`, `--muted #8e8a96`
+- Accent : `--accent #0e6e7a` (teal profond) — le dégradé vert/cyan de la charte
+  est réservé au symbole du logo (plus de dégradés flashy dans l'interface)
+- Bordures fines `--border #e7e2d9`, rayons 4 px, aucune ombre portée, aucun effet
+  de verre, aucune particule animée
+- Typo : Poppins 600 (titres, casse normale) / Inter (texte), interlignes généreux
 
 ### Routes
 `/`, `/rgpd`, `/cybersecurite`, `/infogerance`, `/actualites`, `/actualites/:slug`,
@@ -70,6 +74,23 @@ Demandes ultérieures :
 - Backend : token Turnstile désormais **obligatoire** quand la clé secrète est configurée
 - Tests : rapport `/app/test_reports/iteration_1.json` — 7/7 backend, 14/14 routes,
   0 image cassée, overflow mobile corrigé
+
+### 30/08/2026 (2) — Allègement du style + demandes complémentaires
+- **Refonte en thème clair sobre** (demande : « le style est lourd, trop flashy et pas
+  classe ») : tous les fichiers CSS réécrits, suppression de `ParticleBackground` de
+  toutes les pages, plus d'effets de verre / lueurs / dégradés d'arrière-plan
+- Hero éditorial en deux colonnes (texte + photo), titres en casse normale
+- `sitemap.xml` (14 URLs) + `robots.txt` ajoutés dans `frontend/public/`
+- Formulaire de contact repris à l'identique de l'original : Prénom, Nom de famille,
+  E-mail, Téléphone, Société, Fonction, Message (le champ « Sujet » a disparu).
+  Backend aligné : `first_name` / `last_name` / `position`, e-mail HTML mis à jour
+- Page Contact : horaires d'ouverture et adresse e-mail retirés du bloc coordonnées
+  (l'e-mail reste dans le footer)
+- Carrousel de témoignages (flèches + puces, défilement auto 7 s) avec logo client,
+  fonction et société. ⚠️ Les témoignages 2 et 3 sont **FICTIFS** (Claire Fontaine /
+  Commune de Guignes, Marc Delaunay / Clinique de Grosbois) — à valider ou remplacer
+- Tests : `/app/test_reports/iteration_2.json` — 9/9 backend, 14/14 routes,
+  0 image cassée, 0 débordement responsive (390 px et 768 px)
 
 ## Points d'attention
 - **Turnstile en preview** : le widget affiche « Unable to connect » car le domaine preview

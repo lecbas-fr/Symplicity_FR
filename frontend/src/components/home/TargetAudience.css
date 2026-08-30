@@ -1,66 +1,47 @@
 .target-audience-section {
-  padding: 80px 0;
-  position: relative;
-  z-index: 1;
-  text-align: center;
+  padding: 90px 0;
 }
 
 .target-label {
-  color: rgba(255, 255, 255, 0.5);
-  font-size: 0.9rem;
+  font-size: 0.7rem;
   font-weight: 600;
-  letter-spacing: 2px;
-  margin-bottom: 50px;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--muted);
+  text-align: center;
+  margin-bottom: 42px;
 }
 
 .target-grid {
   display: flex;
-  justify-content: center;
   align-items: center;
-  gap: 60px;
+  justify-content: center;
+  gap: 20px;
   flex-wrap: wrap;
 }
 
 .target-item {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   gap: 12px;
-  font-size: 1.3rem;
-  font-weight: 700;
-  color: var(--accent);
-  transition: all 0.3s ease;
+  padding: 14px 26px;
+  border: 1px solid var(--border-strong);
+  border-radius: 999px;
+  transition: border-color 0.25s ease;
+}
+
+.target-item:hover {
+  border-color: var(--accent);
 }
 
 .target-check {
   color: var(--accent);
-  flex-shrink: 0;
+  width: 17px;
+  height: 17px;
 }
 
-.target-item:hover {
-  transform: translateX(5px);
-  color: var(--accent);
-}
-
-.target-item:hover .target-check {
-  animation: pulse 1s infinite;
-}
-
-@keyframes pulse {
-  0%, 100% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.2);
-  }
-}
-
-@media (max-width: 768px) {
-  .target-grid {
-    flex-direction: column;
-    gap: 30px;
-  }
-
-  .target-item {
-    font-size: 1.1rem;
-  }
+.target-title {
+  color: var(--ink);
+  font-size: 0.95rem;
+  font-weight: 500;
 }

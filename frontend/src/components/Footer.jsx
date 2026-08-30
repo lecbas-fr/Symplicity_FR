@@ -95,7 +95,7 @@ const Footer = () => (
             </li>
           </ul>
           <Link to="/contact" className="btn-primary footer-cta" data-testid="footer-contact-cta">
-            NOUS CONTACTER
+            Nous contacter
           </Link>
         </div>
       </div>

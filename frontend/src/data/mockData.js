@@ -44,14 +44,14 @@ export const services = [
   },
   {
     id: 2,
-    title: "CYBERSÉCURITÉ",
+    title: "Cybersécurité",
     description: "Faites auditer vos infrastructures IT, repérez les failles, et faites-vous accompagner pour une sécurisation optimale de vos installations",
     link: "/cybersecurite",
     icon: "Lock"
   },
   {
     id: 3,
-    title: "INFOGÉRANCE",
+    title: "Infogérance",
     description: "Externalisez votre DSI en toute quiétude. Quel que soit votre enjeu IT (administration de parc, maintenance IT, choix de logiciel, achat de matériel...), nos experts vous accompagnent.",
     link: "/infogerance",
     icon: "Server"
@@ -83,12 +83,32 @@ export const partnerLogos = [
   { id: 2, name: "Network-ing", url: "/assets/img/logo-networking.png" }
 ];
 
+// Le premier témoignage provient du site d'origine. Les deux suivants sont des
+// témoignages FICTIFS rédigés à titre d'illustration, à valider/remplacer par le client.
 export const testimonials = [
   {
     id: 1,
     quote: "Symplicity m'a fait redécouvrir le sens du mot « Service » ! Merci !",
-    author: "Sébastien ROZIAK",
-    company: "Eiffage Route"
+    author: "Sébastien Roziak",
+    role: "Responsable d'exploitation",
+    company: "Eiffage Route",
+    logo: "/assets/clients/logo_eiffage.png"
+  },
+  {
+    id: 2,
+    quote: "Depuis que Symplicity gère notre parc informatique, nos agents travaillent sereinement. Les interventions sont rapides et les explications toujours claires, même pour les non-initiés.",
+    author: "Claire Fontaine",
+    role: "Directrice générale des services",
+    company: "Commune de Guignes",
+    logo: "/assets/clients/logo_guignes.png"
+  },
+  {
+    id: 3,
+    quote: "L'accompagnement RGPD a été mené avec beaucoup de pédagogie. Nous avons gagné en conformité, mais aussi en confiance auprès de nos patients.",
+    author: "Marc Delaunay",
+    role: "Directeur administratif et financier",
+    company: "Clinique de Grosbois",
+    logo: "/assets/clients/logo_clinique_de_grosbois.png"
   }
 ];
 
@@ -99,14 +119,14 @@ export const targetAudience = [
 ];
 
 export const aboutContent = {
-  title: "QUI SOMMES-NOUS ?",
+  title: "Qui sommes-nous ?",
   description: "Depuis plus de 15 ans, Symplicity sert les TPE/PME et les collectivités locales, en veillant à leur proposer des solutions innovantes et créatrices de valeur dans le cycle de vie de leurs solutions informatiques.\n\nDepuis l'analyse des besoins jusqu'à l'infogérance avec une expertise dans les solutions Cloud, la cybersécurité et le RGPD, Symplicity se veut l'interlocuteur privilégié des structures de toutes tailles souhaitant externaliser leur DSI.\n\nPrestataire référence Cybermalveillance.Gouv.fr, nous avons été labellisés ExpertCyber par l'AFNOR en 2021.",
   image: "/assets/photos/photo1.jpg",
   certificationLogo: "/assets/certifications/cybermalveillance.png"
 };
 
 export const commitmentsContent = {
-  title: "NOS ENGAGEMENTS",
+  title: "Nos engagements",
   description: "Dans le cadre de notre activité, nous nous engageons et œuvrons chaque jour pour le respect de nos valeurs relatives à la Responsabilité Sociétale des Entreprises et des Collectivités Locales.\n\nPour nous, être une Entreprise Responsable c'est avant tout veiller au bien-être et à l'épanouissement professionnel de nos salariés, mais également à celui de nos clients, notamment en leur fournissant le meilleur matériel possible (réduction de bruit, ergonomie, etc).\n\nAu cœur de nos engagements se trouvent également l'optimisation des dépenses énergétiques, ainsi que de notre impact carbone.\n\nEnfin, le tri/recyclage de nos déchets numériques de la diversité est lui aussi un axe majeur de notre engagement. En effet, il est important pour nous d'être vigilants et actifs sur ces sujets, car nous sommes conscients de l'impact considérable de l'informatique sur l'environnement, et souhaitons agir à notre échelle sur ces enjeux."
 };
 

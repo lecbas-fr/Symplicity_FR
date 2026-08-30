@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react';
-import ParticleBackground from '../components/ParticleBackground';
 import SEO from '../components/SEO';
 import RichText from '../components/RichText';
 import { legalNoticePage } from '../data/siteContent';
@@ -16,7 +15,6 @@ const LegalNotice = () => {
         url="https://www.symplicity.fr/mentions-legales"
       />
       <div className="service-page" data-testid="legal-notice-page">
-        <ParticleBackground />
 
         <section className="page-hero">
           <div className="container">

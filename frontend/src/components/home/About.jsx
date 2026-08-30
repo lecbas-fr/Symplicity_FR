@@ -20,7 +20,7 @@ const About = () => {
               <img src={aboutContent.certificationLogo} alt="Cybermalveillance" />
             </div>
             <Link to="/qui-sommes-nous" className="btn-secondary fade-in-up" style={{ animationDelay: '0.3s' }}>
-              EN SAVOIR PLUS <ArrowRight size={18} style={{ marginLeft: '8px' }} />
+              En savoir plus <ArrowRight size={18} style={{ marginLeft: '8px' }} />
             </Link>
           </div>
           

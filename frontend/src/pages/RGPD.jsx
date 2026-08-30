@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
 import { Shield, FileText, Users, ClipboardList, GraduationCap } from 'lucide-react';
-import ParticleBackground from '../components/ParticleBackground';
 import SEO from '../components/SEO';
 import RichText from '../components/RichText';
 import CtaSection from '../components/CtaSection';
@@ -21,7 +20,6 @@ const RGPD = () => {
         url="https://www.symplicity.fr/rgpd"
       />
       <div className="service-page" data-testid="rgpd-page">
-        <ParticleBackground />
 
         <section className="page-hero">
           <div className="container">

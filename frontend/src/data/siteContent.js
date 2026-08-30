@@ -25,7 +25,7 @@ export const rgpdContent = {
 };
 
 export const cyberContent = {
-  title: "CYBERSÉCURITÉ",
+  title: "Cybersécurité",
   subtitle: "Faites auditer vos infrastructures IT, repérez les failles, et faites-vous accompagner pour une sécurisation optimale de vos installations.",
   intro: [
     { t: 'p', v: "Notre cheval de bataille : **sensibiliser** les entreprises et collectivités locales aux problématiques de **sécurité informatique**, leur proposer des **audits de sécurité** de leurs installations et accompagner celles qui le souhaitent dans la démarche de **sécurisation de leurs infrastructures IT**." },
@@ -91,7 +91,7 @@ export const cyberContent = {
 };
 
 export const infogeranceContent = {
-  title: "INFOGÉRANCE",
+  title: "Infogérance",
   subtitle: "Externalisez votre DSI en toute quiétude. Quel que soit votre enjeu IT, nos experts vous accompagnent.",
   intro: [
     { t: 'p', v: "Vous ne souhaitez pas (ou n'avez pas les ressources pour) avoir une DSI interne ? Pas de panique : **Symplicity se charge d'exploiter et optimiser votre parc informatique !**" },
@@ -140,7 +140,7 @@ export const infogeranceContent = {
 };
 
 export const commitmentsPage = {
-  title: "NOS ENGAGEMENTS",
+  title: "Nos engagements",
   subtitle: "Symplicity est une société engagée, au service de la Responsabilité Sociétale des Entreprises et des Collectivités Locales.",
   sections: [
     {
@@ -181,7 +181,7 @@ export const commitmentsPage = {
 };
 
 export const aboutPage = {
-  title: "QUI SOMMES-NOUS ?",
+  title: "Qui sommes-nous ?",
   subtitle: "Partenaire de votre IT depuis 2007",
   blocks: [
     { t: 'p', v: "Symplicity est une société spécialisée dans l'informatique d'entreprise, basée en Essonne. Depuis 2007, nous fournissons des solutions, des produits informatiques et des conseils sur mesure pour accompagner la croissance de nos clients au quotidien." },
@@ -195,7 +195,7 @@ export const aboutPage = {
 };
 
 export const legalNoticePage = {
-  title: "MENTIONS LÉGALES",
+  title: "Mentions légales",
   subtitle: "Informations légales et éditoriales",
   blocks: [
     { t: 'h2', v: "Éditeur et responsable de la publication" },
@@ -217,7 +217,7 @@ export const legalNoticePage = {
 };
 
 export const privacyPage = {
-  title: "POLITIQUE DE CONFIDENTIALITÉ",
+  title: "Politique de confidentialité",
   subtitle: "Protection de vos données personnelles",
   blocks: [
     { t: 'h2', v: "Informations transmises par un utilisateur" },
@@ -229,7 +229,7 @@ export const privacyPage = {
 };
 
 export const dataRightsPage = {
-  title: "RGPD — VOS DONNÉES",
+  title: "RGPD — vos données",
   subtitle: "Exercer vos droits sur les données que nous détenons",
   blocks: [
     { t: 'p', v: "Dans le cadre du Règlement général sur la protection des données, vous pouvez nous demander la consultation, la modification ou la suppression des données que nous avons collectées sur vous en nous écrivant un message via le formulaire de contact ou à l'adresse contact@symplicity.fr." },

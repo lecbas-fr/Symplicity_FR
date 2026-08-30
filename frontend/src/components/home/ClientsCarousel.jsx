@@ -39,7 +39,7 @@ const ClientsCarousel = () => {
   return (
     <section className="clients-section">
       <div className="container">
-        <h6 className="clients-label">- NOS CLIENTS -</h6>
+        <h6 className="clients-label">Nos clients</h6>
       </div>
       
       <div className="carousel-container">

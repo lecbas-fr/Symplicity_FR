@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react';
-import ParticleBackground from '../components/ParticleBackground';
 import SEO from '../components/SEO';
 import RichText from '../components/RichText';
 import CtaSection from '../components/CtaSection';
@@ -17,7 +16,6 @@ const DataRights = () => {
         url="https://www.symplicity.fr/rgpd-vos-donnees"
       />
       <div className="service-page" data-testid="data-rights-page">
-        <ParticleBackground />
 
         <section className="page-hero">
           <div className="container">
@@ -37,7 +35,7 @@ const DataRights = () => {
         <CtaSection
           title="Une demande concernant vos données personnelles ?"
           text="Écrivez-nous via le formulaire de contact ou à contact@symplicity.fr"
-          label="NOUS ÉCRIRE"
+          label="Nous écrire"
           testId="data-rights-cta"
         />
       </div>

@@ -15,7 +15,7 @@ class EmailService:
         self.from_email = os.environ.get('SMTP_FROM_EMAIL', self.smtp_user)
         self.to_email = os.environ.get('CONTACT_EMAIL', 'contact@symplicity.fr')
         
-    async def send_contact_email(self, name: str, email: str, phone: str, company: str, subject: str, message: str):
+    async def send_contact_email(self, first_name: str, last_name: str, email: str, phone: str, company: str, position: str, message: str):
         """
         Envoie un email de notification pour un nouveau message de contact
         """
@@ -24,6 +24,9 @@ class EmailService:
             if not all([self.smtp_host, self.smtp_user, self.smtp_password]):
                 logger.warning("Variables SMTP non configurées - Email non envoyé")
                 return False
+
+            full_name = f"{first_name} {last_name}".strip()
+            subject = f"{full_name} — {company}" if company else full_name
 
             # Créer le message
             msg = MIMEMultipart('alternative')
@@ -37,16 +40,17 @@ class EmailService:
             <html>
                 <body style="font-family: Arial, sans-serif; line-height: 1.6; color: #333;">
                     <div style="max-width: 600px; margin: 0 auto; padding: 20px; border: 1px solid #ddd; border-radius: 8px;">
-                        <h2 style="color: #7ed957; border-bottom: 2px solid #7ed957; padding-bottom: 10px;">
+                        <h2 style="color: #0e6e7a; border-bottom: 2px solid #0e6e7a; padding-bottom: 10px;">
                             Nouveau message de contact
                         </h2>
                         
                         <div style="margin: 20px 0;">
-                            <p><strong>Nom :</strong> {name}</p>
+                            <p><strong>Prénom :</strong> {first_name}</p>
+                            <p><strong>Nom :</strong> {last_name}</p>
                             <p><strong>Email :</strong> {email}</p>
                             {f'<p><strong>Téléphone :</strong> {phone}</p>' if phone else ''}
-                            {f'<p><strong>Entreprise :</strong> {company}</p>' if company else ''}
-                            <p><strong>Sujet :</strong> {subject}</p>
+                            {f'<p><strong>Société :</strong> {company}</p>' if company else ''}
+                            {f'<p><strong>Fonction :</strong> {position}</p>' if position else ''}
                         </div>
                         
                         <div style="background-color: #f5f5f5; padding: 15px; border-radius: 5px; margin: 20px 0;">
@@ -68,11 +72,12 @@ class EmailService:
             text_body = f"""
             Nouveau message de contact
             
-            Nom: {name}
+            Prénom: {first_name}
+            Nom: {last_name}
             Email: {email}
             {f'Téléphone: {phone}' if phone else ''}
-            {f'Entreprise: {company}' if company else ''}
-            Sujet: {subject}
+            {f'Société: {company}' if company else ''}
+            {f'Fonction: {position}' if position else ''}
             
             Message:
             {message}
@@ -94,7 +99,7 @@ class EmailService:
                 start_tls=True
             )
             
-            logger.info(f"Email envoyé avec succès pour le contact de {name} ({email})")
+            logger.info(f"Email envoyé avec succès pour le contact de {full_name} ({email})")
             return True
             
         except Exception as e:

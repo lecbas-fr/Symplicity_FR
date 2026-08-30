@@ -22,7 +22,7 @@ const Services = () => {
     <section className="services-section section">
       <div className="container">
         <div className="section-header">
-          <h2 className="section-title fade-in-up">NOTRE EXPERTISE</h2>
+          <h2 className="section-title fade-in-up">Notre expertise</h2>
           <p className="section-subtitle fade-in-up" style={{ animationDelay: '0.1s' }}>
             Notre métier ? Vous accompagner sur les sujets suivants :
           </p>
@@ -41,7 +41,7 @@ const Services = () => {
               <h3 className="service-title">{service.title}</h3>
               <p className="service-description">{service.description}</p>
               <Link to={service.link} className="service-link">
-                DÉCOUVRIR <ArrowRight size={18} />
+                Découvrir <ArrowRight size={18} />
               </Link>
             </div>
           ))}

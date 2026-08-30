@@ -42,7 +42,7 @@ def test_contact_missing_fields(client):
 
 def test_contact_invalid_email(client):
     r = client.post(f"{BASE_URL}/api/contact", json={
-        "name": "T", "email": "bad", "subject": "s", "message": "m"
+        "firstName": "T", "lastName": "D", "email": "bad", "message": "m"
     })
     assert r.status_code == 422
 
@@ -50,9 +50,9 @@ def test_contact_invalid_email(client):
 def test_contact_invalid_turnstile_token(client):
     """Should return 4xx (not 500) when Turnstile token is invalid."""
     r = client.post(f"{BASE_URL}/api/contact", json={
-        "name": "TEST_John",
+        "firstName": "TEST_John", "lastName": "Doe", "position": "DSI",
         "email": "test@example.com",
-        "subject": "Sujet test",
+        
         "message": "Message de test",
         "turnstileToken": "invalid-token-xxx",
     })
@@ -60,15 +60,37 @@ def test_contact_invalid_turnstile_token(client):
     assert r.status_code in (400, 401, 403)
 
 
-def test_contact_no_turnstile_token_accepted_or_400(client):
-    """Backend currently allows missing token (logs warning) – must not 500."""
+def test_contact_no_turnstile_token_returns_400(client):
+    """When TURNSTILE_SECRET_KEY is configured, missing token must be rejected with 400 (not 500)."""
     r = client.post(f"{BASE_URL}/api/contact", json={
-        "name": "TEST_John",
+        "firstName": "TEST_John", "lastName": "Doe", "position": "DSI",
         "email": "test@example.com",
-        "subject": "Sujet test",
         "message": "Message de test",
     })
     assert r.status_code < 500, f"Got {r.status_code}: {r.text}"
+    assert r.status_code == 400, f"Expected 400, got {r.status_code}: {r.text}"
+
+
+def test_sitemap_xml(client):
+    r = client.get(f"{BASE_URL}/sitemap.xml")
+    assert r.status_code == 200
+    body = r.text
+    assert "<urlset" in body
+    for path in [
+        "/", "/rgpd", "/cybersecurite", "/infogerance", "/actualites",
+        "/actualites/intelligence-artificielle-et-cybersecurite",
+        "/actualites/starware-it-services-devient-symplicity",
+        "/actualites/conformite-rgpd-en-essonne",
+        "/contact", "/qui-sommes-nous", "/nos-engagements",
+        "/mentions-legales", "/politique-de-confidentialite", "/rgpd-vos-donnees"
+    ]:
+        assert path in body, f"Missing {path} in sitemap"
+
+
+def test_robots_txt(client):
+    r = client.get(f"{BASE_URL}/robots.txt")
+    assert r.status_code == 200
+    assert "Sitemap:" in r.text
 
 
 def test_no_mongo_dependency_in_startup():

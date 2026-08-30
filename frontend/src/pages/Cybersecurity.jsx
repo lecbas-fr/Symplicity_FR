@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
 import { Lock, ShieldAlert, LifeBuoy } from 'lucide-react';
-import ParticleBackground from '../components/ParticleBackground';
 import SEO from '../components/SEO';
 import RichText from '../components/RichText';
 import CtaSection from '../components/CtaSection';
@@ -19,7 +18,6 @@ const Cybersecurity = () => {
         url="https://www.symplicity.fr/cybersecurite"
       />
       <div className="service-page" data-testid="cybersecurity-page">
-        <ParticleBackground />
 
         <section className="page-hero">
           <div className="container">

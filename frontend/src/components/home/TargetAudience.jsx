@@ -7,7 +7,7 @@ const TargetAudience = () => {
   return (
     <section className="target-audience-section">
       <div className="container">
-        <h6 className="target-label">- POUR QUI ? -</h6>
+        <h6 className="target-label">Pour qui ?</h6>
         <div className="target-grid">
           {targetAudience.map((target, index) => (
             <div 

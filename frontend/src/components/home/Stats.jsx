@@ -6,7 +6,7 @@ const Stats = () => {
   return (
     <section className="stats-section">
       <div className="container">
-        <h6 className="stats-label">- NOS CHIFFRES -</h6>
+        <h6 className="stats-label">Nos chiffres</h6>
         <div className="stats-grid">
           {stats.map((stat, index) => (
             <div 

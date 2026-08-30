@@ -1,18 +1,17 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, ArrowDown } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import { companyInfo, partnerLogos } from '../../data/mockData';
 import './Hero.css';
 
 const Hero = () => (
   <section className="hero" data-testid="hero-section">
-    <div className="hero-bg" style={{ backgroundImage: "url('/assets/photos/photo_bleu_2.jpg')" }} aria-hidden="true" />
-    <div className="hero-content">
-      <div className="container hero-inner">
+    <div className="container hero-inner">
+      <div className="hero-text">
         <span className="eyebrow" data-testid="hero-eyebrow">Partenaire de votre IT depuis 2007</span>
 
         <h1 className="hero-title" data-testid="hero-title">
-          Services informatiques <em>sur-mesure</em>, créateurs de valeur pour votre entreprise
+          Services informatiques sur-mesure, créateurs de valeur pour votre entreprise
         </h1>
 
         <p className="hero-description" data-testid="hero-description">
@@ -21,10 +20,10 @@ const Hero = () => (
 
         <div className="hero-actions">
           <Link to="/contact" className="btn-primary" data-testid="hero-contact-button">
-            NOUS CONTACTER
+            Nous contacter
           </Link>
-          <Link to="/infogerance" className="hero-link" data-testid="hero-expertise-link">
-            Découvrir nos expertises <ArrowRight size={18} />
+          <Link to="/infogerance" className="link-arrow" data-testid="hero-expertise-link">
+            Découvrir nos expertises <ArrowRight size={16} />
           </Link>
         </div>
 
@@ -37,10 +36,10 @@ const Hero = () => (
           </div>
         </div>
       </div>
-    </div>
 
-    <div className="hero-scroll-indicator" aria-hidden="true">
-      <ArrowDown size={20} className="scroll-arrow" />
+      <div className="hero-media">
+        <img src="/assets/photos/photo_bleu_2.jpg" alt="Les équipes Symplicity au travail" />
+      </div>
     </div>
   </section>
 );

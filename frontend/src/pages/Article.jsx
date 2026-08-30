@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react';
 import { useParams, Link, Navigate } from 'react-router-dom';
 import { Calendar, Clock, ArrowLeft, ArrowRight } from 'lucide-react';
-import ParticleBackground from '../components/ParticleBackground';
 import SEO from '../components/SEO';
 import RichText from '../components/RichText';
 import CtaSection from '../components/CtaSection';
@@ -28,7 +27,6 @@ const Article = () => {
         url={`https://www.symplicity.fr/actualites/${article.slug}`}
       />
       <div className="service-page" data-testid="article-page">
-        <ParticleBackground />
 
         <section className="article-hero">
           <div className="container container-narrow">

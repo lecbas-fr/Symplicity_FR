@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react';
-import ParticleBackground from '../components/ParticleBackground';
 import Hero from '../components/home/Hero';
 import ClientsCarousel from '../components/home/ClientsCarousel';
 import About from '../components/home/About';
@@ -26,7 +25,6 @@ const Home = () => {
         url="https://www.symplicity.fr"
       />
       <div className="home-page" data-testid="home-page">
-        <ParticleBackground />
         <Hero />
         <ClientsCarousel />
         <About />

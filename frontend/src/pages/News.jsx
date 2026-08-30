@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Calendar, Clock, ArrowRight } from 'lucide-react';
-import ParticleBackground from '../components/ParticleBackground';
 import SEO from '../components/SEO';
 import { articles } from '../data/siteContent';
 import './News.css';
@@ -18,11 +17,10 @@ const News = () => {
         url="https://www.symplicity.fr/actualites"
       />
       <div className="service-page" data-testid="news-page">
-        <ParticleBackground />
 
         <section className="page-hero">
           <div className="container">
-            <h1 className="page-title fade-in-up">ACTUALITÉS</h1>
+            <h1 className="page-title fade-in-up">Actualités</h1>
             <p className="page-subtitle fade-in-up" style={{ animationDelay: '0.1s' }}>
               Analyses, décryptages et nouvelles de l'entreprise
             </p>

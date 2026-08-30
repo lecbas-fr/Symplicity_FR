@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
 import { Zap, Building2, HeartHandshake } from 'lucide-react';
-import ParticleBackground from '../components/ParticleBackground';
 import SEO from '../components/SEO';
 import RichText from '../components/RichText';
 import CtaSection from '../components/CtaSection';
@@ -21,7 +20,6 @@ const Commitments = () => {
         url="https://www.symplicity.fr/nos-engagements"
       />
       <div className="service-page" data-testid="commitments-page">
-        <ParticleBackground />
 
         <section className="page-hero">
           <div className="container">

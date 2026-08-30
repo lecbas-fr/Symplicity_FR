@@ -1,67 +1,63 @@
 .certifications-section {
-  padding: 80px 0;
-  position: relative;
-  z-index: 1;
+  padding: 70px 0 90px;
 }
 
 .certifications-label {
-  text-align: center;
-  color: rgba(255, 255, 255, 0.5);
-  font-size: 0.9rem;
+  font-size: 0.7rem;
   font-weight: 600;
-  letter-spacing: 2px;
-  margin-bottom: 50px;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--muted);
+  text-align: center;
+  margin-bottom: 46px;
 }
 
 .certifications-grid {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
-  gap: 20px;
-  max-width: 1160px;
+  gap: 30px;
+  max-width: 980px;
   margin: 0 auto;
+  align-items: center;
 }
 
 .certification-card {
-  aspect-ratio: 1.35;
+  height: 86px;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 26px;
-  background: #ffffff !important;
-  border: 1px solid rgba(255, 255, 255, 0.14) !important;
-  border-radius: 16px;
-  transition: transform 0.35s ease, box-shadow 0.35s ease;
-}
-
-.certification-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.35);
+  background: transparent !important;
+  border: none !important;
+  border-radius: 0;
 }
 
 .certification-card img {
   max-width: 100%;
   max-height: 100%;
   object-fit: contain;
-  transition: transform 0.35s ease;
+  filter: grayscale(1);
+  opacity: 0.62;
+  transition: opacity 0.3s ease, filter 0.3s ease;
 }
 
 .certification-card:hover img {
-  transform: scale(1.04);
+  filter: none;
+  opacity: 1;
 }
 
 @media (max-width: 1024px) {
   .certifications-grid {
     grid-template-columns: repeat(3, 1fr);
+    gap: 26px;
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 640px) {
   .certifications-grid {
     grid-template-columns: repeat(2, 1fr);
-    gap: 16px;
   }
 
   .certification-card {
-    padding: 20px;
+    height: 68px;
   }
 }
