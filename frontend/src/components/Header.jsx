@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, Linkedin, Twitter, Facebook, Phone } from 'lucide-react';
-import { navigationLinks, socialLinks, companyInfo } from '../data/mockData';
+import { Menu, X } from 'lucide-react';
+import { navigationLinks } from '../data/mockData';
 import Logo from './Logo';
 import './Header.css';
 
-const socialIcons = { Linkedin, Twitter, Facebook };
+const HELP_URL = 'https://get.teamviewer.com/6yqvgcy';
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -24,32 +24,6 @@ const Header = () => {
 
   return (
     <header className={`header ${isScrolled ? 'scrolled' : ''}`} data-testid="site-header">
-      <div className="header-top">
-        <div className="container header-top-inner">
-          <a href={`tel:${companyInfo.phoneHref}`} className="header-phone" data-testid="header-phone">
-            <Phone size={14} /> {companyInfo.phone}
-          </a>
-          <div className="social-links">
-            {socialLinks.map((social) => {
-              const Icon = socialIcons[social.icon];
-              return (
-                <a
-                  key={social.name}
-                  href={social.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="social-icon"
-                  aria-label={social.name}
-                  data-testid={`header-social-${social.name.toLowerCase()}`}
-                >
-                  <Icon size={16} />
-                </a>
-              );
-            })}
-          </div>
-        </div>
-      </div>
-
       <nav className="navbar">
         <div className="container nav-container">
           <Logo size="md" testId="header-logo" />
@@ -66,7 +40,13 @@ const Header = () => {
                 {link.name}
               </Link>
             ))}
-            <a href={`tel:${companyInfo.phoneHref}`} className="btn-help" data-testid="nav-help-button">
+            <a
+              href={HELP_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-help"
+              data-testid="nav-help-button"
+            >
               HELP
             </a>
           </div>

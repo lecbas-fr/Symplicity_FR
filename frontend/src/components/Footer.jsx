@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Linkedin, Twitter, Facebook, Phone, MapPin, Mail } from 'lucide-react';
+import { Linkedin, Twitter, Facebook, Phone, MapPin } from 'lucide-react';
 import { socialLinks, companyInfo } from '../data/mockData';
 import Logo from './Logo';
 import './Footer.css';
@@ -88,10 +88,6 @@ const Footer = () => (
             <li>
               <Phone size={18} />
               <a href={`tel:${companyInfo.phoneHref}`} data-testid="footer-phone">{companyInfo.phone}</a>
-            </li>
-            <li>
-              <Mail size={18} />
-              <a href={`mailto:${companyInfo.email}`} data-testid="footer-email">{companyInfo.email}</a>
             </li>
           </ul>
           <Link to="/contact" className="btn-primary footer-cta" data-testid="footer-contact-cta">

@@ -14,51 +14,8 @@
   box-shadow: 0 1px 14px rgba(23, 20, 31, 0.06);
 }
 
-.header-top {
-  border-bottom: 1px solid var(--border);
-  padding: 7px 0;
-}
-
-.header-top-inner {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 20px;
-}
-
-.header-phone {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  color: var(--muted);
-  text-decoration: none;
-  font-size: 0.78rem;
-  letter-spacing: 0.05em;
-  transition: color 0.25s ease;
-}
-
-.header-phone:hover {
-  color: var(--accent);
-}
-
-.social-links {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-}
-
-.social-icon {
-  color: var(--muted);
-  display: inline-flex;
-  transition: color 0.25s ease;
-}
-
-.social-icon:hover {
-  color: var(--accent);
-}
-
 .navbar {
-  padding: 16px 0;
+  padding: 18px 0;
 }
 
 .nav-container {
