@@ -92,6 +92,26 @@ Demandes ultérieures :
 - Tests : `/app/test_reports/iteration_2.json` — 9/9 backend, 14/14 routes,
   0 image cassée, 0 débordement responsive (390 px et 768 px)
 
+### 30/08/2026 (3) — Centre de veille RSS sur la page Actualités
+- Nouveau service `backend/services/news_service.py` + route `GET /api/veille`
+- Sources (validées par le client) : **CERT-FR** alertes / avis / bulletins,
+  **CNIL**, **ESET WeLiveSecurity FR**, **IT-Connect**, **UnderNews**, **ZATAZ**
+- Filtrage par mots-clés métier (cyber / RGPD / IT) + exclusion des contenus
+  commerciaux (offres, bons plans, tests matériel) sur les flux presse
+- Onglets Tout / Cybersécurité / RGPD / Infogérance-IT avec compteurs
+- Badges de criticité (Alerte, Avis de sécurité, Bulletin, CNIL, Éditeur, Presse IT)
+- Bandeau « Alerte de sécurité en cours » si une alerte CERT-FR a moins de 7 jours
+- Mise en avant « Concerne votre parc » : Sophos, Bitdefender, Microsoft, Acronis,
+  Vade Secure, HP, Veeam — ces items remontent en tête du classement
+- **Résumés d'une phrase en français générés par Claude Haiku 4.5**
+  (`emergentintegrations` + `EMERGENT_LLM_KEY`), calculés dans un thread dédié pour
+  ne jamais bloquer l'API, mis en cache par URL (aucun coût pour un item déjà résumé)
+- Cache serveur 30 min avec *stale-while-revalidate* : réponse en ~0,12 s
+- Mention légale : titres + extraits + lien vers la source uniquement
+- Tests : `/app/test_reports/iteration_3.json` — 13/14 backend (1 échec réseau
+  transitoire), frontend 100 %. Le timeout ponctuel relevé a été corrigé (résumés
+  déplacés dans un thread + cache servi immédiatement)
+
 ## Points d'attention
 - **Turnstile en preview** : le widget affiche « Unable to connect » car le domaine preview
   n'est pas whitelisté dans le dashboard Cloudflare. Comportement ATTENDU.

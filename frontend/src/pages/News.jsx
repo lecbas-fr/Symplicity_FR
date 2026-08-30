@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { Calendar, Clock, ArrowRight } from 'lucide-react';
 import SEO from '../components/SEO';
 import { articles } from '../data/siteContent';
+import VeilleSection from '../components/news/VeilleSection';
 import './News.css';
 
 const News = () => {
@@ -53,6 +54,8 @@ const News = () => {
             </div>
           </div>
         </section>
+
+        <VeilleSection />
       </div>
     </>
   );

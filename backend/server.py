@@ -7,6 +7,7 @@ from pathlib import Path
 
 # Import routes
 from routes.contact import router as contact_router
+from routes.news import router as news_router
 
 
 ROOT_DIR = Path(__file__).parent
@@ -30,6 +31,7 @@ async def health_check():
 # Include the router in the main app
 app.include_router(api_router)
 app.include_router(contact_router)
+app.include_router(news_router)
 
 app.add_middleware(
     CORSMiddleware,
