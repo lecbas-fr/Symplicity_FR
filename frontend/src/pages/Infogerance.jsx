@@ -14,10 +14,17 @@ const Infogerance = () => {
   return (
     <>
       <SEO
-        title="Infogérance | Symplicity - DSI externalisée en Île-de-France"
-        description="Infogérance informatique en Essonne et Île-de-France : administration de parc, maintenance IT, support utilisateurs, solutions Cloud pour TPE, PME et collectivités."
-        keywords="infogérance Essonne, DSI externalisée, gestion parc informatique, maintenance IT, support technique, infogérance Île-de-France, solutions cloud"
-        url="https://www.symplicity.fr/infogerance"
+        page="infogerance"
+        breadcrumb={[{ name: 'Accueil', path: '/' }, { name: 'Infogérance', path: '/infogerance' }]}
+        jsonLd={{
+          '@context': 'https://schema.org',
+          '@type': 'Service',
+          name: 'Infogérance et DSI externalisée',
+          serviceType: 'Infogérance informatique',
+          provider: { '@type': 'LocalBusiness', name: 'Symplicity', url: 'https://www.symplicity.fr' },
+          areaServed: ['Essonne', 'Seine-et-Marne', 'Paris', 'Île-de-France'],
+          description: 'Gestion et maintenance du parc informatique, support utilisateurs et solutions Cloud en Île-de-France.'
+        }}
       />
       <div className="service-page" data-testid="infogerance-page">
 

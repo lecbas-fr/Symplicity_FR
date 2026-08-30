@@ -56,11 +56,7 @@ export const VeilleSection = () => {
         <div className="veille-header">
           <div>
             <span className="eyebrow">Veille</span>
-            <h2 className="section-title">Veille cybersécurité, RGPD &amp; IT</h2>
-            <p className="section-subtitle">
-              Sources officielles CERT-FR et CNIL, éditeurs de sécurité et presse spécialisée,
-              filtrées et résumées par nos équipes.
-            </p>
+            <h2 className="section-title">Ce qu'il faut retenir aujourd'hui</h2>
           </div>
           {data.updatedAt && (
             <span className="veille-updated" data-testid="veille-updated">

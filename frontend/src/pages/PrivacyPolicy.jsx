@@ -10,9 +10,8 @@ const PrivacyPolicy = () => {
   return (
     <>
       <SEO
-        title="Politique de confidentialité | Symplicity"
-        description="Politique de confidentialité du site symplicity.fr : traitement des informations transmises et gestion des cookies."
-        url="https://www.symplicity.fr/politique-de-confidentialite"
+        page="politique-de-confidentialite"
+        breadcrumb={[{ name: 'Accueil', path: '/' }, { name: 'Politique de confidentialité', path: '/politique-de-confidentialite' }]}
       />
       <div className="service-page" data-testid="privacy-page">
 

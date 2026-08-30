@@ -14,10 +14,17 @@ const RGPD = () => {
   return (
     <>
       <SEO
-        title="RGPD & Conformité | Symplicity - DPO externalisé en Essonne"
-        description="Mise en conformité RGPD en Essonne, Paris, Seine-et-Marne. DPO externalisé certifié CNIL, audit de conformité, registres et sensibilisation par Symplicity."
-        keywords="RGPD Essonne, DPO externalisé, conformité RGPD Paris, audit RGPD, protection données, DPO certifié CNIL, mise en conformité"
-        url="https://www.symplicity.fr/rgpd"
+        page="rgpd"
+        breadcrumb={[{ name: 'Accueil', path: '/' }, { name: 'RGPD', path: '/rgpd' }]}
+        jsonLd={{
+          '@context': 'https://schema.org',
+          '@type': 'Service',
+          name: 'Mise en conformité RGPD et DPO externe',
+          serviceType: 'Conseil RGPD',
+          provider: { '@type': 'LocalBusiness', name: 'Symplicity', url: 'https://www.symplicity.fr' },
+          areaServed: ['Essonne', 'Seine-et-Marne', 'Paris', 'Île-de-France'],
+          description: 'Audit de conformité, DPO externalisé certifié CNIL, tenue des registres et sensibilisation des équipes.'
+        }}
       />
       <div className="service-page" data-testid="rgpd-page">
 

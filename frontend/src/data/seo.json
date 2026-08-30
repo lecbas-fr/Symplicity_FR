@@ -1,0 +1,76 @@
+{
+  "site": {
+    "name": "Symplicity",
+    "origin": "https://www.symplicity.fr",
+    "ogImage": "https://www.symplicity.fr/assets/img/og-symplicity.png",
+    "locale": "fr_FR"
+  },
+  "pages": {
+    "home": {
+      "path": "/",
+      "title": "Symplicity | Infogérance, RGPD et Cybersécurité en Essonne et Île-de-France",
+      "description": "Symplicity | Infogérance - RGPD - Cybersécurité | Essonne - Paris - Seine et Marne. Services informatiques sur-mesure et créateurs de valeur pour les TPE, PME et collectivités locales depuis 2007.",
+      "keywords": "infogérance Essonne, RGPD Essonne, cybersécurité Essonne, informatique entreprise Essonne, infogérance Paris, infogérance Seine et Marne, TPE PME Essonne, DSI externalisée"
+    },
+    "rgpd": {
+      "path": "/rgpd",
+      "title": "RGPD & DPO externe en Essonne | Symplicity",
+      "description": "DPO externe Essonne. Mise en conformité RGPD Essonne. Consultant et accompagnement RGPD pour les entreprises et collectivités locales de l'Essonne, de Seine-et-Marne et de Paris : audit de conformité, registres, sensibilisation des équipes.",
+      "keywords": "DPO externe Essonne, mise en conformité RGPD Essonne, consultant RGPD Essonne, audit RGPD Essonne, accompagnement RGPD, RGPD Paris, RGPD 91, DPO certifié CNIL"
+    },
+    "cybersecurite": {
+      "path": "/cybersecurite",
+      "title": "Cybersécurité en Essonne — Labellisés Expert Cyber | Symplicity",
+      "description": "Nous sécurisons les infrastructures informatiques de nos clients, clé en main. Sécurisation informatique Essonne. Cybersécurité Essonne. Expert Cyber Essonne. Audit de sécurité, pentest, PRA/PCA, sauvegarde informatique et remédiation post-incident.",
+      "keywords": "cybersécurité Essonne, sécurisation informatique Essonne, Expert Cyber Essonne, audit sécurité informatique, pentest, sauvegarde informatique Essonne, maintenance informatique Essonne, cybermalveillance"
+    },
+    "infogerance": {
+      "path": "/infogerance",
+      "title": "Infogérance en Essonne et Île-de-France | Symplicity",
+      "description": "Experts de l'informatique d'entreprise auprès des TPE, PME et collectivités locales, nous gérons le parc informatique et les projets IT de nos clients de A à Z. Infogérance - RGPD - Cybersécurité. Essonne, Seine-et-Marne, Paris.",
+      "keywords": "infogérance Essonne, infogérance Paris, infogérance 91, DSI externalisée, gestion parc informatique, maintenance IT Essonne, support informatique TPE PME, informatique collectivités"
+    },
+    "actualites": {
+      "path": "/actualites",
+      "title": "Actualités & veille cybersécurité | Symplicity",
+      "description": "Toute l'actualité de l'infogérance, la cybersécurité et le RGPD, en Essonne et dans toute la France. Veille quotidienne CERT-FR et CNIL, alertes de sécurité et analyses utiles aux TPE, PME et collectivités qui externalisent leur DSI.",
+      "keywords": "veille cybersécurité, alertes CERT-FR, actualités RGPD, CNIL actualités, actualité infogérance Essonne, failles de sécurité, vulnérabilités"
+    },
+    "contact": {
+      "path": "/contact",
+      "title": "Contact | Symplicity — Experts informatiques en Essonne",
+      "description": "Contactez nos équipes d'experts informatiques en Essonne pour votre projet de sécurisation informatique ou de délégation de votre informatique en Essonne, Seine-et-Marne ou à Paris. Maintenance informatique 91. Infogérance 91. Cybersécurité 91. RGPD 91.",
+      "keywords": "contact informatique Essonne, maintenance informatique 91, infogérance 91, cybersécurité 91, RGPD 91, DPO externe 91, informatique collectivités"
+    },
+    "qui-sommes-nous": {
+      "path": "/qui-sommes-nous",
+      "title": "Qui sommes-nous ? | Symplicity",
+      "description": "Spécialiste de l'infogérance en Essonne, de l'informatique d'entreprise et du RGPD en Essonne, Seine-et-Marne et à Paris, Symplicity propose des prestations d'audit informatique, d'audit RGPD et de mise en conformité depuis 2007.",
+      "keywords": "qui sommes-nous Symplicity, spécialiste infogérance Essonne, audit informatique Essonne, audit RGPD Essonne, Starware IT Services, ExpertCyber AFNOR"
+    },
+    "nos-engagements": {
+      "path": "/nos-engagements",
+      "title": "Nos engagements RSE | Symplicity",
+      "description": "Performance énergétique du matériel, recyclage des déchets électroniques, optimisation de nos bureaux et bien-être de nos collaborateurs : découvrez les engagements de Symplicity pour une informatique d'entreprise responsable en Essonne.",
+      "keywords": "engagements RSE informatique, informatique responsable Essonne, recyclage DEEE, Energy Star, 80 Plus, informatique verte, RSE TPE PME"
+    },
+    "mentions-legales": {
+      "path": "/mentions-legales",
+      "title": "Mentions légales | Symplicity",
+      "description": "Nos mentions légales. Symplicity - Infogérance, RGPD et Cybersécurité en Essonne, Seine-et-Marne et à Paris : éditeur du site, hébergement, contenu et marques déposées.",
+      "keywords": "mentions légales Symplicity, éditeur site, Symplicity Saint-Michel-sur-Orge"
+    },
+    "politique-de-confidentialite": {
+      "path": "/politique-de-confidentialite",
+      "title": "Politique de confidentialité | Symplicity",
+      "description": "Notre politique de confidentialité conforme RGPD : informations transmises via le site et gestion des cookies. Audit RGPD en Essonne, Seine-et-Marne et Paris. Infogérance 91. Infogérance 77.",
+      "keywords": "politique de confidentialité, cookies, RGPD site, audit RGPD Essonne, infogérance 91, infogérance 77"
+    },
+    "rgpd-vos-donnees": {
+      "path": "/rgpd-vos-donnees",
+      "title": "RGPD — vos données | Symplicity",
+      "description": "Experts du RGPD en Essonne auprès des TPE, PME et collectivités locales : exercez vos droits d'accès, de rectification et de suppression sur les données collectées par Symplicity.",
+      "keywords": "droits RGPD, accès aux données, suppression données personnelles, DPO externe Essonne, RGPD Essonne"
+    }
+  }
+}

@@ -78,9 +78,6 @@ def test_sitemap_xml(client):
     assert "<urlset" in body
     for path in [
         "/", "/rgpd", "/cybersecurite", "/infogerance", "/actualites",
-        "/actualites/intelligence-artificielle-et-cybersecurite",
-        "/actualites/starware-it-services-devient-symplicity",
-        "/actualites/conformite-rgpd-en-essonne",
         "/contact", "/qui-sommes-nous", "/nos-engagements",
         "/mentions-legales", "/politique-de-confidentialite", "/rgpd-vos-donnees"
     ]:

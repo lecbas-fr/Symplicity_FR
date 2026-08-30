@@ -10,9 +10,8 @@ const LegalNotice = () => {
   return (
     <>
       <SEO
-        title="Mentions légales | Symplicity"
-        description="Mentions légales du site symplicity.fr : éditeur, hébergement, contenu du site et marques déposées."
-        url="https://www.symplicity.fr/mentions-legales"
+        page="mentions-legales"
+        breadcrumb={[{ name: 'Accueil', path: '/' }, { name: 'Mentions légales', path: '/mentions-legales' }]}
       />
       <div className="service-page" data-testid="legal-notice-page">
 

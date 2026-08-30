@@ -3,6 +3,7 @@ import './App.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import Analytics from './components/Analytics';
 import Home from './pages/Home';
 import About from './pages/About';
 import RGPD from './pages/RGPD';
@@ -14,13 +15,13 @@ import PrivacyPolicy from './pages/PrivacyPolicy';
 import LegalNotice from './pages/LegalNotice';
 import DataRights from './pages/DataRights';
 import News from './pages/News';
-import Article from './pages/Article';
 import { Toaster } from './components/ui/toaster';
 
 function App() {
   return (
     <div className="App">
       <BrowserRouter>
+        <Analytics />
         <Header />
         <Routes>
           <Route path="/" element={<Home />} />
@@ -29,7 +30,6 @@ function App() {
           <Route path="/cybersecurite" element={<Cybersecurity />} />
           <Route path="/infogerance" element={<Infogerance />} />
           <Route path="/actualites" element={<News />} />
-          <Route path="/actualites/:slug" element={<Article />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/nos-engagements" element={<Commitments />} />
           <Route path="/politique-de-confidentialite" element={<PrivacyPolicy />} />

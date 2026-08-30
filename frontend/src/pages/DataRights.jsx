@@ -11,9 +11,8 @@ const DataRights = () => {
   return (
     <>
       <SEO
-        title="RGPD — vos données | Symplicity"
-        description="Exercez vos droits RGPD : consultation, modification ou suppression des données collectées par Symplicity."
-        url="https://www.symplicity.fr/rgpd-vos-donnees"
+        page="rgpd-vos-donnees"
+        breadcrumb={[{ name: 'Accueil', path: '/' }, { name: 'RGPD — vos données', path: '/rgpd-vos-donnees' }]}
       />
       <div className="service-page" data-testid="data-rights-page">
 

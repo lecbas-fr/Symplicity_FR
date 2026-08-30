@@ -14,10 +14,8 @@ const Commitments = () => {
   return (
     <>
       <SEO
-        title="Nos engagements RSE | Symplicity"
-        description="Performance énergétique du matériel, recyclage des DEEE, optimisation de nos bureaux et bien-être de nos collaborateurs : découvrez les engagements RSE de Symplicity."
-        keywords="engagements RSE Symplicity, informatique responsable, recyclage DEEE, Energy Star, 80 Plus, informatique verte Essonne"
-        url="https://www.symplicity.fr/nos-engagements"
+        page="nos-engagements"
+        breadcrumb={[{ name: 'Accueil', path: '/' }, { name: 'Nos engagements', path: '/nos-engagements' }]}
       />
       <div className="service-page" data-testid="commitments-page">
 

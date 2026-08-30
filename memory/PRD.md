@@ -112,6 +112,32 @@ Demandes ultérieures :
   transitoire), frontend 100 %. Le timeout ponctuel relevé a été corrigé (résumés
   déplacés dans un thread + cache servi immédiatement)
 
+### 30/08/2026 (4) — SEO complet + suppression des anciennes actualités
+- **Source unique** `frontend/src/data/seo.json` : titres, descriptions et mots-clés
+  fusionnant les formulations locales du site actuel (« DPO Externe Essonne »,
+  « Infogérance 91 »…) avec des tournures plus lisibles, pour les 11 pages
+- `SEO.jsx` refondu : title, description, keywords, robots, author, og:* (dont
+  `og:locale`, dimensions et alt de l'image), twitter:*, canonical, JSON-LD
+  **BreadcrumbList** sur chaque page et **Service** sur RGPD / Cybersécurité / Infogérance
+- Balises SEO statiques retirées de `public/index.html` (react-helmet-async v3 sous
+  React 19 n'écrase pas les balises existantes → doublons). Il ne reste que le
+  JSON-LD LocalBusiness et la vérification Search Console
+- **Pré-génération au build** : `frontend/scripts/prerender-seo.js` (lancé par
+  `yarn build`) écrit un `index.html` par route avec ses propres balises → aperçus
+  LinkedIn / Facebook / WhatsApp corrects même sans JavaScript
+- **Google Analytics 4 prêt à l'emploi** : `components/Analytics.jsx` s'active dès que
+  la clé `REACT_APP_GA_ID` est renseignée (page_view à chaque changement de route,
+  `anonymize_ip`). Tant qu'elle est vide, aucun script tiers n'est chargé
+- `sitemap.xml` : 11 URLs avec `lastmod`, plus aucune trace des anciens articles
+- **Anciennes actualités supprimées** : page Article et route `/actualites/:slug`
+  retirées, section « Nos derniers articles » retirée de l'accueil. La page
+  Actualités ne contient plus que la veille RSS. Les contenus des 3 articles restent
+  archivés dans `data/siteContent.js` (`articles`) si besoin de les republier
+- Tests : `/app/test_reports/iteration_4.json` — backend 26/26 pytest. Les 2 anomalies
+  SEO relevées (doublon de `<title>`, breadcrumb manquant sur l'accueil) ont été
+  corrigées puis revérifiées : 1 seul title / description / canonical par page,
+  JSON-LD valides (2 par page, 3 sur les pages services), `window.gtag` undefined
+
 ## Points d'attention
 - **Turnstile en preview** : le widget affiche « Unable to connect » car le domaine preview
   n'est pas whitelisté dans le dashboard Cloudflare. Comportement ATTENDU.

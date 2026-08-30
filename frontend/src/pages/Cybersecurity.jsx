@@ -12,10 +12,17 @@ const Cybersecurity = () => {
   return (
     <>
       <SEO
-        title="Cybersécurité | Symplicity - Expert Cyber labellisé en Essonne"
-        description="Audit de sécurité, pentesting, PRA/PCA, sensibilisation et remédiation post-incident. Symplicity est labellisée ExpertCyber par Cybermalveillance.gouv.fr."
-        keywords="cybersécurité Essonne, audit sécurité IT, ExpertCyber AFNOR, cybermalveillance, pentest, PRA PCA, sécurité informatique TPE PME"
-        url="https://www.symplicity.fr/cybersecurite"
+        page="cybersecurite"
+        breadcrumb={[{ name: 'Accueil', path: '/' }, { name: 'Cybersécurité', path: '/cybersecurite' }]}
+        jsonLd={{
+          '@context': 'https://schema.org',
+          '@type': 'Service',
+          name: 'Cybersécurité des infrastructures IT',
+          serviceType: 'Cybersécurité',
+          provider: { '@type': 'LocalBusiness', name: 'Symplicity', url: 'https://www.symplicity.fr' },
+          areaServed: ['Essonne', 'Seine-et-Marne', 'Paris', 'Île-de-France'],
+          description: 'Audit de sécurité, pentest, PRA/PCA, sensibilisation et remédiation post-incident pour TPE, PME et collectivités.'
+        }}
       />
       <div className="service-page" data-testid="cybersecurity-page">
 

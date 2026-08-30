@@ -1,0 +1,55 @@
+{
+  "summary": "Testé backend (26/26 pytest OK, y compris nouveaux tests sitemap/robots) + SEO client sur les 11 routes + suppression des anciens articles + GA absent + régression responsive/images. 2 anomalies SEO à corriger : doublon de <title> sur toutes les pages (title statique laissé dans public/index.html) et Home ne génère qu'un seul JSON-LD (breadcrumb absent). Tout le reste conforme aux exigences.",
+  "backend_issues": {
+    "critical": [],
+    "minor": []
+  },
+  "frontend_issues": {
+    "ui_bugs": [
+      {
+        "component": "public/index.html + SEO.jsx",
+        "issue": "DOUBLON de balise <title> sur TOUTES les pages (2 balises <title> présentes). La 1re valeur est correcte (celle de react-helmet-async), la 2e est toujours 'Symplicity | Infogérance, RGPD et Cybersécurité en Essonne et Île-de-France' (le <title> statique laissé à la ligne 63 de /app/frontend/public/index.html). react-helmet-async v3 sous React 19 ajoute son <title> sans supprimer le statique. Le cahier des charges impose 'EXACTEMENT UNE balise <title>'.",
+        "selector": "document.querySelectorAll('title').length === 2 sur / , /rgpd , /cybersecurite , /infogerance , /actualites , /contact , /qui-sommes-nous , /nos-engagements , /mentions-legales , /politique-de-confidentialite , /rgpd-vos-donnees",
+        "priority": "CRITICAL"
+      },
+      {
+        "component": "src/pages/Home.jsx",
+        "issue": "La page d'accueil ne rend qu'UN SEUL bloc JSON-LD (LocalBusiness venant d'index.html). Attendu : au moins 2 (LocalBusiness global + BreadcrumbList). Le composant <SEO page='home' /> est appelé sans prop 'breadcrumb', donc aucun BreadcrumbList n'est injecté. Toutes les autres pages passent correctement la prop breadcrumb.",
+        "selector": "document.querySelectorAll('script[type=\"application/ld+json\"]').length === 1 sur /",
+        "priority": "HIGH"
+      }
+    ],
+    "integration_issues": [],
+    "design_issues": []
+  },
+  "test_report_links": [
+    "/app/backend/tests/test_seo_static.py",
+    "/app/backend/tests/test_contact_api.py",
+    "/app/backend/tests/test_veille_api.py",
+    "/app/test_reports/pytest/pytest_results.xml"
+  ],
+  "action_items": [
+    "Supprimer la ligne 63 de /app/frontend/public/index.html (<title>Symplicity | Infogérance…</title>) — la note d'implémentation dit déjà 'plus de balises SEO statiques' mais le <title> statique a été oublié. Résout le doublon sur les 11 pages.",
+    "Ajouter la prop breadcrumb au SEO de src/pages/Home.jsx, ex : breadcrumb={[{ name: 'Accueil', path: '/' }]} — pour obtenir le 2e JSON-LD (BreadcrumbList) attendu sur '/'.",
+    "Après correction, relancer un contrôle rapide : document.querySelectorAll('title').length doit valoir 1 sur toutes les routes et document.querySelectorAll('script[type=\"application/ld+json\"]').length doit valoir ≥2 (≥3 sur /rgpd /cybersecurite /infogerance)."
+  ],
+  "critical_code_review_comments": [
+    "SEO.jsx : bonne factorisation à partir de seo.json — un seul emplacement pour titles/descriptions/keywords, canonical calculé à partir du path. Bien.",
+    "prerender-seo.js : le template remplace bien le <title> existant ; en revanche, en runtime (SPA), react-helmet-async n'écrase pas le <title> statique de public/index.html, d'où le doublon. Le contrat 'plus de balises SEO statiques dans index.html' doit être appliqué en enlevant aussi le <title>.",
+    "Analytics.jsx : garde correctement 'injected' + no-op quand REACT_APP_GA_ID vide — vérifié : aucun script googletagmanager, window.gtag=undefined.",
+    "App.js : la route /actualites/:slug a bien été supprimée. Les anciennes URLs affichent Header+Footer sans crash mais renvoient une zone de contenu vide (614 chars ≈ header+footer). Cela pourrait à terme être remplacé par un composant NotFound 404 explicite avec redirect vers /actualites, mais ce n'est pas dans le périmètre demandé.",
+    "sitemap.xml : 11 URLs, chacune avec <lastmod> (2026-08-30), plus aucune trace des 3 anciens slugs. Conforme.",
+    "test_contact_api.py::test_sitemap_xml : contenait encore des assertions sur les 3 anciennes URLs — mis à jour pour rester en phase avec la nouvelle spec."
+  ],
+  "updated_files": [
+    "/app/backend/tests/test_seo_static.py (nouveau — 3 tests sur sitemap/robots)",
+    "/app/backend/tests/test_contact_api.py (retrait des 3 anciennes URLs d'actualités de l'assertion sitemap)"
+  ],
+  "success_rate": { "backend": "100%", "frontend": "82%" },
+  "test_credentials": "N/A (aucun compte requis).",
+  "seed_data_creation": "Aucune.",
+  "retest_needed": true,
+  "main_agent_can_self_test": true,
+  "context_for_next_testing_agent": "Backend pytest complet : 26/26 OK (contact + veille + seo_static). Anomalies SEO restantes purement front : (1) supprimer <title> statique dans public/index.html — impacte les 11 pages ; (2) ajouter breadcrumb à Home.jsx pour obtenir ≥2 JSON-LD sur '/'. Après fix, revérifier document.querySelectorAll('title').length===1 et LD count par page. Le widget Cloudflare Turnstile 110200 en preview reste ATTENDU. window.gtag=undefined confirmé tant que REACT_APP_GA_ID est vide.",
+  "rca of the issue": "Le SEO a été centralisé dans seo.json + <SEO/> (react-helmet-async). Les balises SEO statiques ont été retirées de public/index.html SAUF le <title> ligne 63. react-helmet-async v3 sous React 19 ajoute son propre <title> dans <head> mais ne supprime PAS le <title> déjà présent au chargement — d'où la présence permanente de 2 <title>. Reproduction : ouvrir n'importe quelle route → devtools → $$('title') retourne un tableau de 2 éléments. Mitigation : retirer la ligne <title>…</title> de public/index.html (déjà l'intention documentée dans le commentaire ligne 9). Deuxième cause indépendante : Home.jsx utilise <SEO page='home'/> sans passer la prop breadcrumb, alors que SEO.jsx conditionne le BreadcrumbList à cette prop → 0 breadcrumb → seulement 1 JSON-LD sur /."
+}

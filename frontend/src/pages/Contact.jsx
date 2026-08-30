@@ -80,10 +80,8 @@ const Contact = () => {
   return (
     <>
       <SEO
-        title="Contact | Symplicity - Expert infogérance en Essonne"
-        description="Contactez Symplicity pour vos besoins en infogérance, RGPD et cybersécurité en Essonne, Paris et Seine-et-Marne. Nos experts vous répondent rapidement."
-        keywords="contact Symplicity, infogérance Essonne, audit cybersécurité, DPO Essonne, RGPD conseil, contact expert IT"
-        url="https://www.symplicity.fr/contact"
+        page="contact"
+        breadcrumb={[{ name: 'Accueil', path: '/' }, { name: 'Contact', path: '/contact' }]}
       />
       <div className="contact-page" data-testid="contact-page">
         <section className="page-hero">

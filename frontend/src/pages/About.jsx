@@ -20,10 +20,8 @@ const About = () => {
   return (
     <>
       <SEO
-        title="Qui sommes-nous ? | Symplicity - Partenaire de votre IT depuis 2007"
-        description="Symplicity, société d'informatique d'entreprise basée en Essonne. Depuis 2007 : proximité, professionnalisme et création de valeur sur-mesure pour les TPE/PME et collectivités."
-        keywords="qui sommes-nous Symplicity, expert infogérance, cybersécurité Essonne, labellisé ExpertCyber, prestataire Cybermalveillance, DPO Essonne"
-        url="https://www.symplicity.fr/qui-sommes-nous"
+        page="qui-sommes-nous"
+        breadcrumb={[{ name: 'Accueil', path: '/' }, { name: 'Qui sommes-nous ?', path: '/qui-sommes-nous' }]}
       />
       <div className="about-page" data-testid="about-page">
 
