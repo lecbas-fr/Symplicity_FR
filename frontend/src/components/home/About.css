@@ -1,5 +1,5 @@
 .about-section {
-  background: linear-gradient(180deg, transparent 0%, rgba(0, 255, 136, 0.02) 100%);
+  background: linear-gradient(180deg, transparent 0%, rgba(169, 240, 78, 0.02) 100%);
 }
 
 .about-grid {
@@ -54,7 +54,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(135deg, rgba(0, 255, 136, 0.1) 0%, transparent 100%);
+  background: linear-gradient(135deg, rgba(169, 240, 78, 0.1) 0%, transparent 100%);
   z-index: 1;
 }
 

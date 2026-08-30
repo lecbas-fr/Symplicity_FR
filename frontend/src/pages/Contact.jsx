@@ -43,11 +43,6 @@ const Contact = () => {
 
   const handleTurnstileError = () => {
     setTurnstileToken(null);
-    toast({
-      title: 'Erreur CAPTCHA',
-      description: 'La vérification CAPTCHA a échoué. Veuillez réessayer.',
-      variant: 'destructive'
-    });
   };
 
   const handleTurnstileExpire = () => {
@@ -144,7 +139,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h3>Adresse</h3>
-                    <p>{companyInfo.address}</p>
+                    <p>{companyInfo.addressLines.join(', ')}</p>
                   </div>
                 </div>
 
@@ -154,16 +149,29 @@ const Contact = () => {
                   </div>
                   <div>
                     <h3>Téléphone</h3>
-                    <a href={`tel:${companyInfo.phone}`}>{companyInfo.phone}</a>
+                    <a href={`tel:${companyInfo.phoneHref}`} data-testid="contact-phone-link">{companyInfo.phone}</a>
+                  </div>
+                </div>
+
+                <div className="contact-detail-item">
+                  <div className="contact-icon">
+                    <Mail size={24} />
+                  </div>
+                  <div>
+                    <h3>E-mail</h3>
+                    <a href={`mailto:${companyInfo.email}`} data-testid="contact-email-link">{companyInfo.email}</a>
                   </div>
                 </div>
               </div>
 
               <div className="contact-hours glass">
                 <h3>Horaires d'ouverture</h3>
-                <p>Lundi - Vendredi : 9h00 - 18h00</p>
-                <p>Samedi : 8h00 - 12h00</p>
-                <p>Dimanche : Fermé</p>
+                {companyInfo.hours.map((slot) => (
+                  <p key={slot.days}>
+                    <span>{slot.days}</span>
+                    <strong>{slot.time}</strong>
+                  </p>
+                ))}
               </div>
             </div>
 

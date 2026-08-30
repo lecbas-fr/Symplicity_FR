@@ -1,121 +1,74 @@
 import React, { useEffect } from 'react';
-import { Link } from 'react-router-dom';
-import { Server, CheckCircle, HardDrive, Cloud, Headphones, Wrench, ArrowRight } from 'lucide-react';
+import { Server, Clock, TrendingUp, ShieldCheck, Wallet, Users, Leaf } from 'lucide-react';
 import ParticleBackground from '../components/ParticleBackground';
 import SEO from '../components/SEO';
+import RichText from '../components/RichText';
+import CtaSection from '../components/CtaSection';
+import { infogeranceContent } from '../data/siteContent';
 import './About.css';
 
+const icons = { Clock, TrendingUp, Server, ShieldCheck, Wallet, Users, Leaf };
+
 const Infogerance = () => {
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
-
-  const benefits = [
-    { icon: <CheckCircle size={24} />, text: 'Réduction des coûts IT' },
-    { icon: <CheckCircle size={24} />, text: 'Expertise technique disponible' },
-    { icon: <CheckCircle size={24} />, text: 'Disponibilité et réactivité 24/7' },
-    { icon: <CheckCircle size={24} />, text: 'Focus sur votre cœur de métier' },
-    { icon: <CheckCircle size={24} />, text: 'Technologies à jour' },
-    { icon: <CheckCircle size={24} />, text: 'Accompagnement personnalisé' }
-  ];
-
-  const services = [
-    {
-      icon: <HardDrive size={32} />,
-      title: 'Administration de Parc',
-      description: 'Gestion complète de votre parc informatique et de vos équipements'
-    },
-    {
-      icon: <Cloud size={32} />,
-      title: 'Solutions Cloud',
-      description: 'Migration et gestion de vos infrastructures vers le cloud'
-    },
-    {
-      icon: <Wrench size={32} />,
-      title: 'Maintenance IT',
-      description: 'Maintenance préventive et corrective de vos systèmes informatiques'
-    },
-    {
-      icon: <Headphones size={32} />,
-      title: 'Support Utilisateurs',
-      description: 'Assistance technique pour vos collaborateurs au quotidien'
-    }
-  ];
+  useEffect(() => { window.scrollTo(0, 0); }, []);
 
   return (
     <>
-      <SEO 
-        title="Infogérance | Symplicity - Gestion IT Externalisée Essonne"
-        description="Infogérance informatique Essonne, Paris, Seine-et-Marne. Administration parc IT, support 24/7, solutions cloud pour TPE/PME par Symplicity."
-        keywords="infogérance Essonne, gestion parc informatique, maintenance IT, support technique, infogérance TPE PME Paris, solutions cloud Essonne"
+      <SEO
+        title="Infogérance | Symplicity - DSI externalisée en Île-de-France"
+        description="Infogérance informatique en Essonne et Île-de-France : administration de parc, maintenance IT, support utilisateurs, solutions Cloud pour TPE, PME et collectivités."
+        keywords="infogérance Essonne, DSI externalisée, gestion parc informatique, maintenance IT, support technique, infogérance Île-de-France, solutions cloud"
         url="https://www.symplicity.fr/infogerance"
       />
-      <div className="service-page">
+      <div className="service-page" data-testid="infogerance-page">
         <ParticleBackground />
-      
-      <section className="page-hero">
-        <div className="container">
-          <div className="hero-icon-badge fade-in-up">
-            <Server size={48} />
-          </div>
-          <h1 className="page-title fade-in-up" style={{ animationDelay: '0.1s' }}>Infogérance</h1>
-          <p className="page-subtitle fade-in-up" style={{ animationDelay: '0.2s' }}>
-            Externalisez votre DSI en toute quiétude. Quel que soit votre enjeu IT, nos experts vous accompagnent
-          </p>
-        </div>
-      </section>
 
-      <section className="section">
-        <div className="container">
-          <div className="service-intro glass fade-in-up">
-            <h2>Votre DSI Externalisée</h2>
-            <p>
-              L'infogérance vous permet de vous concentrer sur votre activité principale en déléguant la gestion de votre infrastructure informatique à des experts. Administration de parc, maintenance IT, choix de logiciels, achat de matériel, solutions Cloud... nous prenons en charge l'ensemble de vos besoins informatiques pour que vous puissiez vous concentrer sur votre cœur de métier.
-            </p>
+        <section className="page-hero">
+          <div className="container">
+            <div className="hero-icon-badge fade-in-up">
+              <Server size={44} />
+            </div>
+            <h1 className="page-title fade-in-up" style={{ animationDelay: '0.1s' }}>{infogeranceContent.title}</h1>
+            <p className="page-subtitle fade-in-up" style={{ animationDelay: '0.2s' }}>{infogeranceContent.subtitle}</p>
           </div>
-        </div>
-      </section>
+        </section>
 
-      <section className="section" style={{ background: 'rgba(0, 255, 136, 0.02)' }}>
-        <div className="container">
-          <h2 className="section-title text-center fade-in-up">Nos Services d'Infogérance</h2>
-          <div className="highlights-grid">
-            {services.map((service, index) => (
-              <div key={index} className="highlight-card glass fade-in-up" style={{ animationDelay: `${index * 0.1}s` }}>
-                <div className="highlight-icon">{service.icon}</div>
-                <h3 className="highlight-title">{service.title}</h3>
-                <p className="highlight-description">{service.description}</p>
+        <section className="section">
+          <div className="container">
+            <div className="intro-split">
+              <div className="panel fade-in-up">
+                <RichText blocks={infogeranceContent.intro} />
               </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="section">
-        <div className="container">
-          <h2 className="section-title text-center fade-in-up">Les Avantages de l'Infogérance</h2>
-          <div className="benefits-grid">
-            {benefits.map((benefit, index) => (
-              <div key={index} className="benefit-item fade-in-up" style={{ animationDelay: `${index * 0.05}s` }}>
-                <span className="benefit-icon">{benefit.icon}</span>
-                <span className="benefit-text">{benefit.text}</span>
+              <div className="intro-visual fade-in-up" style={{ animationDelay: '0.15s' }}>
+                <img src="/assets/photos/photo3.jpg" alt="Externalisez votre DSI avec Symplicity" />
               </div>
-            ))}
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      <section className="section cta-section">
-        <div className="container text-center">
-          <h2 className="section-title fade-in-up">Externalisez Votre DSI</h2>
-          <p className="section-subtitle fade-in-up" style={{ animationDelay: '0.1s' }}>
-            Découvrez comment nous pouvons optimiser votre infrastructure IT
-          </p>
-          <Link to="/contact" className="btn-primary fade-in-up" style={{ animationDelay: '0.2s' }}>
-            Demander un Devis <ArrowRight size={18} style={{ marginLeft: '8px' }} />
-          </Link>
-        </div>
-      </section>
+        <section className="section section-alt">
+          <div className="container">
+            <span className="eyebrow">Pourquoi externaliser votre DSI ?</span>
+            <h2 className="section-title">Les avantages sont nombreux</h2>
+            <div className="advantages-list">
+              {infogeranceContent.advantages.map((item, index) => {
+                const Icon = icons[item.icon];
+                return (
+                  <article key={item.title} className="advantage-row fade-in-up" style={{ animationDelay: `${index * 0.06}s` }}>
+                    <span className="advantage-index">{String(index + 1).padStart(2, '0')}</span>
+                    <div className="advantage-icon"><Icon size={24} /></div>
+                    <div className="advantage-body">
+                      <h3>{item.title}</h3>
+                      <p>{item.description}</p>
+                    </div>
+                  </article>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+
+        <CtaSection title={infogeranceContent.ctaTitle} text={infogeranceContent.ctaText} testId="infogerance-cta" />
       </div>
     </>
   );

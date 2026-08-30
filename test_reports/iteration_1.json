@@ -1,0 +1,33 @@
+{
+  "summary": "Full end-to-end review of the Symplicity refonte. Backend (FastAPI, no Mongo) + Frontend (React, 14 routes, articles, contact form, SEO, i18n FR). 7/7 backend pytest passed. All 14 routes render with HTTP 200, no broken images (naturalWidth>0 partout), no wixstatic.com/emergentagent.com asset leaks, no console errors (except attendu Turnstile 400 en preview). Header + Footer logos OK (svg /assets/symbol/symbol-gradient.svg, href='/'), tous les data-testid nav-link-* présents avec bons hrefs et surlignage actif, 3 cartes d'articles présentes avec liens fonctionnels, redirection /actualites/<slug-invalid> -> /actualites confirmée, coordonnées Contact et horaires OK, toast 'Vérification requise' affiché quand on soumet sans Turnstile (aucune requête envoyée), burger menu mobile ouvre et navigue correctement. Un SEUL problème détecté: overflow horizontal (~58px) sur /cybersecurite en 390x844 causé par le bloc '.label-block-text' de la section ExpertCyber.",
+  "backend_issues": {
+    "critical": [],
+    "minor": [
+      {"endpoint": "POST /api/contact", "issue": "Quand le champ turnstileToken est absent du payload, le backend accepte quand même la requête (log un warning). Le frontend le bloque via un toast, mais un client hors navigateur pourrait bypasser Turnstile. En production, remettre le raise HTTPException(400) commenté ligne 70 de routes/contact.py."}
+    ]
+  },
+  "frontend_issues": {
+    "ui_bugs": [],
+    "integration_issues": [],
+    "design_issues": [
+      {"screen": "/cybersecurite (mobile 390px)", "issues": ["Overflow horizontal ~58px: le bloc '.label-block-text' (section 'Symplicity, labellisée Expert Cyber') mesure 428px de large dans un viewport de 390px. La condition scrollWidth <= clientWidth + 2 échoue (448 vs 390). Vérifier la CSS de .label-block ou son padding/min-width pour permettre le shrink en dessous de 428px."]}
+    ]
+  },
+  "test_report_links": ["/app/backend/tests/test_contact_api.py", "/app/test_reports/pytest/pytest_results.xml"],
+  "action_items": [
+    "Corriger le CSS de la section '.label-block-text' sur /cybersecurite pour éliminer l'overflow horizontal en mobile (390px). Probablement un min-width ou un padding fixe à assouplir.",
+    "(Optionnel) rendre le champ turnstileToken obligatoire côté backend (décommenter le raise 400 dans routes/contact.py)."
+  ],
+  "critical_code_review_comments": [
+    "SEO.jsx: la description par défaut est identique pour toutes les pages qui ne fournissent pas explicitement 'description' (ex: /contact utilise le fallback). Le <title> change bien par page (react-helmet-async fonctionne), mais penser à passer une meta description spécifique à Contact/News pour un meilleur SEO.",
+    "routes/contact.py: la validation Turnstile est bypassée quand le token est absent (voir 'minor' backend). Suppression de MongoDB confirmée dans server.py (aucun import motor/pymongo)."
+  ],
+  "updated_files": ["/app/backend/tests/test_contact_api.py"],
+  "success_rate": {"backend": "100%", "frontend": "~95%"},
+  "test_credentials": "N/A - site vitrine public",
+  "seed_data_creation": "Aucune - pas de DB",
+  "retest_needed": false,
+  "main_agent_can_self_test": true,
+  "context_for_next_testing_agent": "Backend: 7 tests pytest dans /app/backend/tests/test_contact_api.py (root, health, validation 422, turnstile invalide -> 400, absence token -> 200 sans envoi effectif). Frontend: le domaine preview n'est pas whitelisté chez Cloudflare Turnstile, le widget affiche 'Unable to connect' — comportement ATTENDU par le PO. Toutes les routes utilisent /assets locaux (svg, jpg, png) via /app/frontend/public/assets — 0 image cassée. Seul défaut restant: overflow horizontal sur /cybersecurite mobile (voir design_issues).",
+  "rca of the issue": "Overflow /cybersecurite mobile: dans le viewport 390px, l'élément '.label-block-text' (et .label-block-logos frère) rend à 428px de large (left=20, right=448). Le body scrollWidth passe donc à 448. Reproduction: viewport 390x844 + goto /cybersecurite, mesurer document.documentElement.scrollWidth. Mitigation: sur .label-block* ou son container, remplacer un padding/min-width fixe par du padding responsive (var(--space-*)) et ajouter overflow-x:hidden sur le parent en dernier recours."
+}

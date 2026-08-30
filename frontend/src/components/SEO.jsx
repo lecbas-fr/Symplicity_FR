@@ -5,7 +5,7 @@ const SEO = ({
   title = "Symplicity | infogérance en Essonne et Ile de France",
   description = "Symplicity | Infogérance - RGPD - Cybersécurité | Essonne - Paris - Seine et Marne",
   keywords = "infogérance, RGPD, cybersécurité, Essonne, Paris, Seine et Marne, services informatiques, TPE, PME, DPO, protection données",
-  ogImage = "https://customer-assets.emergentagent.com/job_symplicity-preview/artifacts/38ekfx2a_Logo_Symplicity_horizontal.png",
+  ogImage = "https://www.symplicity.fr/assets/img/og-symplicity.png",
   url = "https://www.symplicity.fr"
 }) => {
   return (

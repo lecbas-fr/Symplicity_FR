@@ -1,0 +1,51 @@
+.brand-logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  text-decoration: none;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.brand-logo:hover {
+  transform: translateY(-1px);
+}
+
+.brand-logo-symbol {
+  width: auto;
+  flex-shrink: 0;
+}
+
+.brand-logo-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+}
+
+.brand-logo-name {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: 0.02em;
+}
+
+.brand-logo-baseline {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.55);
+  letter-spacing: 0.16em;
+}
+
+.brand-logo-md .brand-logo-symbol { height: 42px; }
+.brand-logo-md .brand-logo-name { font-size: 1.32rem; }
+.brand-logo-md .brand-logo-baseline { font-size: 0.5rem; margin-top: 5px; }
+
+.brand-logo-lg .brand-logo-symbol { height: 58px; }
+.brand-logo-lg .brand-logo-name { font-size: 1.8rem; }
+.brand-logo-lg .brand-logo-baseline { font-size: 0.6rem; margin-top: 6px; }
+
+@media (max-width: 640px) {
+  .brand-logo-md .brand-logo-symbol { height: 34px; }
+  .brand-logo-md .brand-logo-name { font-size: 1.1rem; }
+  .brand-logo-md .brand-logo-baseline { font-size: 0.44rem; }
+}

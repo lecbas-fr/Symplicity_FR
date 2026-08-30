@@ -12,6 +12,9 @@ import Contact from './pages/Contact';
 import Commitments from './pages/Commitments';
 import PrivacyPolicy from './pages/PrivacyPolicy';
 import LegalNotice from './pages/LegalNotice';
+import DataRights from './pages/DataRights';
+import News from './pages/News';
+import Article from './pages/Article';
 import { Toaster } from './components/ui/toaster';
 
 function App() {
@@ -25,10 +28,13 @@ function App() {
           <Route path="/rgpd" element={<RGPD />} />
           <Route path="/cybersecurite" element={<Cybersecurity />} />
           <Route path="/infogerance" element={<Infogerance />} />
+          <Route path="/actualites" element={<News />} />
+          <Route path="/actualites/:slug" element={<Article />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/nos-engagements" element={<Commitments />} />
           <Route path="/politique-de-confidentialite" element={<PrivacyPolicy />} />
           <Route path="/mentions-legales" element={<LegalNotice />} />
+          <Route path="/rgpd-vos-donnees" element={<DataRights />} />
         </Routes>
         <Footer />
         <Toaster />

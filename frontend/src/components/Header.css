@@ -8,10 +8,32 @@
 }
 
 .header-top {
-  background: rgba(10, 14, 39, 0.5);
+  background: rgba(21, 10, 50, 0.5);
   backdrop-filter: blur(10px);
   padding: 8px 0;
   border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.header-top-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.header-phone {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: rgba(255, 255, 255, 0.65);
+  text-decoration: none;
+  font-size: 0.82rem;
+  letter-spacing: 0.04em;
+  transition: color 0.3s ease;
+}
+
+.header-phone:hover {
+  color: var(--accent);
 }
 
 .social-links {
@@ -28,19 +50,19 @@
   justify-content: center;
   background: rgba(255, 255, 255, 0.05);
   border-radius: 50%;
-  color: #7ed957;
+  color: var(--accent);
   transition: all 0.3s ease;
-  border: 1px solid rgba(0, 255, 136, 0.2);
+  border: 1px solid rgba(169, 240, 78, 0.2);
 }
 
 .social-icon:hover {
-  background: rgba(0, 255, 136, 0.1);
+  background: rgba(169, 240, 78, 0.1);
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0, 255, 136, 0.3);
+  box-shadow: 0 4px 12px rgba(169, 240, 78, 0.3);
 }
 
 .navbar {
-  background: rgba(10, 14, 39, 0.8);
+  background: rgba(21, 10, 50, 0.8);
   backdrop-filter: blur(20px);
   padding: 16px 0;
   border-bottom: 1px solid rgba(255, 255, 255, 0.05);
@@ -48,7 +70,7 @@
 }
 
 .header.scrolled .navbar {
-  background: rgba(10, 14, 39, 0.95);
+  background: rgba(21, 10, 50, 0.95);
   padding: 12px 0;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
 }
@@ -64,7 +86,7 @@
   align-items: center;
   gap: 12px;
   text-decoration: none;
-  color: #7ed957;
+  color: var(--accent);
   font-weight: 700;
   font-size: 1.3rem;
   transition: all 0.3s ease;
@@ -102,7 +124,7 @@
 .nav-links {
   display: flex;
   align-items: center;
-  gap: 32px;
+  gap: 26px;
 }
 
 .nav-link {
@@ -122,13 +144,13 @@
   left: 0;
   width: 0;
   height: 2px;
-  background: linear-gradient(90deg, #7ed957 0%, #4dd0e1 100%);
+  background: linear-gradient(90deg, var(--accent) 0%, var(--accent-2) 100%);
   transition: width 0.3s ease;
 }
 
 .nav-link:hover,
 .nav-link.active {
-  color: #7ed957;
+  color: var(--accent);
 }
 
 .nav-link:hover::after,
@@ -139,8 +161,8 @@
 .btn-help {
   padding: 10px 24px;
   background: transparent;
-  color: #7ed957;
-  border: 2px solid #7ed957;
+  color: var(--accent);
+  border: 2px solid var(--accent);
   border-radius: 50px;
   font-weight: 600;
   font-size: 0.9rem;
@@ -151,23 +173,23 @@
 }
 
 .btn-help:hover {
-  background: rgba(0, 255, 136, 0.1);
+  background: rgba(169, 240, 78, 0.1);
   transform: translateY(-2px);
-  box-shadow: 0 4px 15px rgba(0, 255, 136, 0.3);
+  box-shadow: 0 4px 15px rgba(169, 240, 78, 0.3);
 }
 
 .mobile-menu-toggle {
   display: none;
   background: transparent;
   border: none;
-  color: #7ed957;
+  color: var(--accent);
   cursor: pointer;
   padding: 8px;
   transition: all 0.3s ease;
 }
 
 .mobile-menu-toggle:hover {
-  color: #7ed957;
+  color: var(--accent);
 }
 
 @media (max-width: 768px) {
@@ -186,7 +208,7 @@
     width: 100%;
     max-width: 300px;
     height: calc(100vh - 68px);
-    background: rgba(10, 14, 39, 0.98);
+    background: rgba(21, 10, 50, 0.98);
     backdrop-filter: blur(20px);
     flex-direction: column;
     align-items: flex-start;

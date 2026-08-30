@@ -1,0 +1,61 @@
+EXPORT DU SITE SYMPLICITY (symplicity.fr)
+Généré le 30/08/2026
+===========================================
+
+CE QUE CONTIENT CET EXPORT
+---------------------------
+14 pages HTML statiques, capturées depuis la version PUBLIÉE du site
+(pas l'éditeur Wix) :
+
+  index.html                          -> Accueil
+  rgpd.html                           -> RGPD
+  rgpd-site.html                      -> RGPD (page secondaire)
+  cybersecurite.html                  -> Cybersécurité
+  infogerance.html                    -> Infogérance
+  contact.html                        -> Contact
+  qui-sommes-nous.html                -> Qui sommes-nous ?
+  nos-engagements.html                -> Nos engagements
+  blog.html                           -> Actualités (liste des articles)
+  post-ia-cybersecurite.html          -> Article : IA et Cybersécurité
+  post-starware-devient-symplicity.html -> Article : Starware devient Symplicity
+  post-rgpd-essonne.html              -> Article : Conformité RGPD en Essonne
+  mentions-legales.html               -> Mentions légales
+  politique-de-confidentialite.html   -> Politique de confidentialité
+
+Chaque fichier contient le HTML tel que rendu par le serveur Wix
+(texte, structure, styles), avec le contenu réellement écrit sur le
+site (le rendu côté serveur intègre déjà tout le texte). Les liens
+entre ces pages ont été réécrits pour pointer les uns vers les autres
+en local, afin de pouvoir naviguer dans l'export en ouvrant simplement
+les fichiers .html dans un navigateur.
+
+LIMITES IMPORTANTES — CE N'EST PAS UN CLONE FONCTIONNEL
+---------------------------------------------------------
+Wix ne propose aucune fonction officielle d'export du code source. Ceci
+est donc une capture "best effort" du rendu public, avec les limites
+suivantes :
+
+1. Images, polices et feuilles de style restent chargées depuis les
+   serveurs Wix (static.wixstatic.com, static.parastorage.com, etc.).
+   Le rendu visuel est donc fidèle tant que ces ressources Wix restent
+   accessibles, mais rien n'est réellement "hébergé ailleurs" — si le
+   site Wix est supprimé, ces éléments cesseront de se charger.
+
+2. Le formulaire de contact, les animations avancées, le chat/HELP,
+   et toute autre fonctionnalité dynamique gérée par le moteur Wix
+   (Thunderbolt) NE fonctionneront PAS de façon fiable une fois sorties
+   de l'environnement Wix — elles dépendent de scripts liés au site ID
+   et à l'infrastructure Wix.
+
+3. Ce n'est pas une base pour une migration technique "clé en main"
+   vers un autre hébergeur : pour un vrai site autonome (WordPress,
+   HTML statique propre, etc.), il faudra reconstruire les pages avec
+   le contenu récupéré ici comme référence (textes, structure, visuels).
+
+RECOMMANDATION
+---------------
+Si l'objectif est de quitter Wix, la meilleure approche reste de
+reconstruire le site sur la nouvelle plateforme cible en copiant le
+contenu (textes, images téléchargées, structure des pages) depuis cet
+export, plutôt que d'essayer d'utiliser ces fichiers HTML tels quels
+comme site de production.

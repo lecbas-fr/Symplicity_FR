@@ -1,3 +1,12 @@
+:root {
+  --ink-950: #150a32;
+  --ink-900: #1e1046;
+  --ink-800: #291456;
+  --accent: #a9f04e;
+  --accent-2: #35d2ee;
+  --brand-gradient: linear-gradient(135deg, #a9f04e 0%, #35d2ee 100%);
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -13,8 +22,8 @@
 
 .App {
   min-height: 100vh;
-  background: linear-gradient(135deg, #0a0e27 0%, #1a0b2e 100%);
-  color: #7ed957;
+  background: var(--ink-950);
+  color: #ffffff;
 }
 
 /* Smooth scrolling */
@@ -28,16 +37,16 @@ html {
 }
 
 ::-webkit-scrollbar-track {
-  background: #0a0e27;
+  background: var(--ink-950);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(180deg, #7ed957 0%, #4dd0e1 100%);
+  background: linear-gradient(180deg, var(--accent) 0%, var(--accent-2) 100%);
   border-radius: 5px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #7ed957;
+  background: var(--accent);
 }
 
 /* Glassmorphism utility class */
@@ -81,10 +90,10 @@ html {
 
 @keyframes glow {
   0%, 100% {
-    box-shadow: 0 0 20px rgba(0, 255, 136, 0.3);
+    box-shadow: 0 0 20px rgba(169, 240, 78, 0.3);
   }
   50% {
-    box-shadow: 0 0 40px rgba(0, 255, 136, 0.6);
+    box-shadow: 0 0 40px rgba(169, 240, 78, 0.6);
   }
 }
 
@@ -112,49 +121,54 @@ html {
   position: absolute;
   width: 2px;
   height: 2px;
-  background: rgba(0, 255, 136, 0.3);
+  background: rgba(169, 240, 78, 0.3);
   border-radius: 50%;
   animation: float 6s infinite ease-in-out;
 }
 
 /* Button styles */
 .btn-primary {
-  background: linear-gradient(135deg, #7ed957 0%, #4dd0e1 100%);
-  color: #0a0e27;
-  font-weight: 600;
-  padding: 14px 32px;
+  background: var(--brand-gradient);
+  color: var(--ink-950);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  padding: 15px 32px;
   border-radius: 50px;
   border: none;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  box-shadow: 0 4px 15px rgba(0, 255, 136, 0.3);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  font-size: 15px;
+  box-shadow: 0 6px 22px rgba(53, 210, 238, 0.22);
 }
 
 .btn-primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 25px rgba(0, 255, 136, 0.5);
-  animation: glow 2s infinite;
+  box-shadow: 0 10px 30px rgba(53, 210, 238, 0.4);
 }
 
 .btn-secondary {
   background: transparent;
-  color: #7ed957;
+  color: var(--accent);
   font-weight: 600;
   padding: 12px 28px;
   border-radius: 50px;
-  border: 2px solid #7ed957;
+  border: 2px solid var(--accent);
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.3s ease;
   text-decoration: none;
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  white-space: nowrap;
   font-size: 16px;
 }
 
 .btn-secondary:hover {
-  background: rgba(0, 255, 136, 0.1);
+  background: rgba(169, 240, 78, 0.1);
   transform: translateY(-2px);
 }
 
@@ -176,7 +190,7 @@ html {
   font-size: 2.5rem;
   font-weight: 700;
   margin-bottom: 20px;
-  background: linear-gradient(135deg, #7ed957 0%, #7ed957 100%);
+  background: linear-gradient(135deg, #ffffff 0%, #ffffff 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -222,5 +236,119 @@ html {
   .grid-3,
   .grid-4 {
     grid-template-columns: 1fr;
+  }
+}
+
+/* ── Brand design layer ─────────────────────────────── */
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 18px;
+}
+
+.eyebrow::before {
+  content: '';
+  width: 34px;
+  height: 2px;
+  background: var(--brand-gradient);
+}
+
+.section-title {
+  font-family: 'Poppins', sans-serif;
+  letter-spacing: -0.02em;
+}
+
+.section-alt {
+  background: var(--ink-900);
+}
+
+.prose h2 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #fff;
+  margin: 48px 0 18px;
+  letter-spacing: -0.01em;
+}
+
+.prose h2:first-child {
+  margin-top: 0;
+}
+
+.prose h3 {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--accent);
+  margin: 32px 0 12px;
+}
+
+.prose p {
+  color: rgba(255, 255, 255, 0.74);
+  line-height: 1.9;
+  font-size: 1.02rem;
+  margin-bottom: 16px;
+}
+
+.prose strong {
+  color: #fff;
+  font-weight: 600;
+}
+
+.prose ul {
+  list-style: none;
+  margin: 18px 0 24px;
+  display: grid;
+  gap: 12px;
+}
+
+.prose ul li {
+  position: relative;
+  padding-left: 28px;
+  color: rgba(255, 255, 255, 0.78);
+  line-height: 1.7;
+}
+
+.prose ul li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.6em;
+  width: 12px;
+  height: 2px;
+  background: var(--brand-gradient);
+}
+
+.prose blockquote {
+  border-left: 3px solid var(--accent);
+  padding: 6px 0 6px 24px;
+  margin: 28px 0;
+  color: #fff;
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+.prose a {
+  color: var(--accent-2);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.panel {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  padding: 48px 44px;
+  backdrop-filter: blur(14px);
+}
+
+@media (max-width: 768px) {
+  .panel {
+    padding: 32px 24px;
   }
 }

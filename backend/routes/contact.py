@@ -57,17 +57,20 @@ async def create_contact_message(
     """
     try:
         # Vérifier le token Turnstile
-        if hasattr(message, 'turnstile_token') and message.turnstile_token:
-            is_valid = await verify_turnstile_token(message.turnstile_token)
+        secret_configured = os.environ.get('TURNSTILE_SECRET_KEY') not in (None, '', 'votre-turnstile-secret-key')
+        token = getattr(message, 'turnstile_token', None)
+
+        if token:
+            is_valid = await verify_turnstile_token(token)
             if not is_valid:
                 raise HTTPException(
                     status_code=400, 
                     detail="Échec de la vérification CAPTCHA. Veuillez réessayer."
                 )
+        elif secret_configured:
+            raise HTTPException(status_code=400, detail="Token CAPTCHA manquant")
         else:
-            logger.warning("Aucun token Turnstile fourni")
-            # En production, vous voudrez peut-être rendre cela obligatoire
-            # raise HTTPException(status_code=400, detail="Token CAPTCHA manquant")
+            logger.warning("Aucun token Turnstile fourni et aucune clé secrète configurée")
         
         # Envoyer l'email en arrière-plan
         background_tasks.add_task(

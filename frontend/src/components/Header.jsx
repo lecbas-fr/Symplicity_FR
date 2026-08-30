@@ -1,8 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, Linkedin, Twitter, Facebook } from 'lucide-react';
-import { navigationLinks, socialLinks } from '../data/mockData';
+import { Menu, X, Linkedin, Twitter, Facebook, Phone } from 'lucide-react';
+import { navigationLinks, socialLinks, companyInfo } from '../data/mockData';
+import Logo from './Logo';
 import './Header.css';
+
+const socialIcons = { Linkedin, Twitter, Facebook };
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -10,59 +13,46 @@ const Header = () => {
   const location = useLocation();
 
   useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
-    };
-
+    const handleScroll = () => setIsScrolled(window.scrollY > 50);
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const getSocialIcon = (iconName) => {
-    switch (iconName) {
-      case 'Linkedin':
-        return <Linkedin size={18} />;
-      case 'Twitter':
-        return <Twitter size={18} />;
-      case 'Facebook':
-        return <Facebook size={18} />;
-      default:
-        return null;
-    }
-  };
+  useEffect(() => {
+    setIsMobileMenuOpen(false);
+  }, [location.pathname]);
 
   return (
-    <header className={`header ${isScrolled ? 'scrolled' : ''}`}>
+    <header className={`header ${isScrolled ? 'scrolled' : ''}`} data-testid="site-header">
       <div className="header-top">
-        <div className="container">
+        <div className="container header-top-inner">
+          <a href={`tel:${companyInfo.phoneHref}`} className="header-phone" data-testid="header-phone">
+            <Phone size={14} /> {companyInfo.phone}
+          </a>
           <div className="social-links">
-            {socialLinks.map((social) => (
-              <a
-                key={social.name}
-                href={social.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="social-icon"
-                aria-label={social.name}
-              >
-                {getSocialIcon(social.icon)}
-              </a>
-            ))}
+            {socialLinks.map((social) => {
+              const Icon = socialIcons[social.icon];
+              return (
+                <a
+                  key={social.name}
+                  href={social.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="social-icon"
+                  aria-label={social.name}
+                  data-testid={`header-social-${social.name.toLowerCase()}`}
+                >
+                  <Icon size={16} />
+                </a>
+              );
+            })}
           </div>
         </div>
       </div>
 
       <nav className="navbar">
         <div className="container nav-container">
-          <Link to="/" className="logo" style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
-            <img 
-              src="https://customer-assets.emergentagent.com/job_symplicity-preview/artifacts/38ekfx2a_Symbole_SWS_d%C3%A9grad%C3%A9.png" 
-              alt="Symplicity Symbol" 
-              className="logo-symbol"
-              style={{ height: '45px', width: 'auto' }}
-            />
-            <span style={{ fontSize: '1.5rem', fontWeight: '700', color: '#7ed957', fontFamily: 'Poppins, sans-serif', letterSpacing: '1px' }}>Symplicity</span>
-          </Link>
+          <Logo size="md" testId="header-logo" />
 
           <div className={`nav-links ${isMobileMenuOpen ? 'active' : ''}`}>
             {navigationLinks.map((link) => (
@@ -71,17 +61,21 @@ const Header = () => {
                 to={link.path}
                 className={`nav-link ${location.pathname === link.path ? 'active' : ''}`}
                 onClick={() => setIsMobileMenuOpen(false)}
+                data-testid={`nav-link-${link.path === '/' ? 'home' : link.path.slice(1)}`}
               >
                 {link.name}
               </Link>
             ))}
-            <a href="#contact" className="btn-help">HELP</a>
+            <a href={`tel:${companyInfo.phoneHref}`} className="btn-help" data-testid="nav-help-button">
+              HELP
+            </a>
           </div>
 
           <button
             className="mobile-menu-toggle"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            aria-label="Toggle menu"
+            aria-label="Menu"
+            data-testid="mobile-menu-toggle"
           >
             {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>

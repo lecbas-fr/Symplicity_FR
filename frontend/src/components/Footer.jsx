@@ -1,42 +1,39 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Linkedin, Twitter, Facebook, Mail, Phone, MapPin } from 'lucide-react';
-import { socialLinks, companyInfo, navigationLinks } from '../data/mockData';
+import { Linkedin, Twitter, Facebook, Phone, MapPin, Mail } from 'lucide-react';
+import { socialLinks, companyInfo } from '../data/mockData';
+import Logo from './Logo';
 import './Footer.css';
 
-const Footer = () => {
-  const getSocialIcon = (iconName) => {
-    switch (iconName) {
-      case 'Linkedin':
-        return <Linkedin size={20} />;
-      case 'Twitter':
-        return <Twitter size={20} />;
-      case 'Facebook':
-        return <Facebook size={20} />;
-      default:
-        return null;
-    }
-  };
+const socialIcons = { Linkedin, Twitter, Facebook };
 
-  return (
-    <footer className="footer">
-      <div className="container">
-        <div className="footer-content">
-          <div className="footer-column">
-            <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '20px' }}>
-              <img 
-                src="https://customer-assets.emergentagent.com/job_symplicity-preview/artifacts/38ekfx2a_Symbole_SWS_d%C3%A9grad%C3%A9.png" 
-                alt="Symplicity Symbol" 
-                className="footer-logo-symbol"
-                style={{ height: '45px', width: 'auto' }}
-              />
-              <span style={{ fontSize: '1.5rem', fontWeight: '700', color: '#7ed957', fontFamily: 'Poppins, sans-serif', letterSpacing: '1px' }}>Symplicity</span>
-            </div>
-            <p className="footer-description">
-              {companyInfo.description}
-            </p>
-            <div className="footer-social">
-              {socialLinks.map((social) => (
+const navColumn = [
+  { name: 'RGPD', path: '/rgpd' },
+  { name: 'Cybersécurité', path: '/cybersecurite' },
+  { name: 'Infogérance', path: '/infogerance' },
+  { name: 'Contact', path: '/contact' },
+  { name: 'Qui sommes-nous ?', path: '/qui-sommes-nous' },
+  { name: 'Nos engagements', path: '/nos-engagements' },
+  { name: 'Actualités', path: '/actualites' }
+];
+
+const legalColumn = [
+  { name: 'Mentions légales', path: '/mentions-legales' },
+  { name: 'Politique de confidentialité', path: '/politique-de-confidentialite' },
+  { name: 'RGPD — vos données', path: '/rgpd-vos-donnees' }
+];
+
+const Footer = () => (
+  <footer className="footer" data-testid="site-footer">
+    <div className="container">
+      <div className="footer-content">
+        <div className="footer-column">
+          <Logo size="md" testId="footer-logo" />
+          <p className="footer-description">{companyInfo.description}</p>
+          <div className="footer-social">
+            {socialLinks.map((social) => {
+              const Icon = socialIcons[social.icon];
+              return (
                 <a
                   key={social.name}
                   href={social.url}
@@ -44,101 +41,77 @@ const Footer = () => {
                   rel="noopener noreferrer"
                   className="footer-social-icon"
                   aria-label={social.name}
+                  data-testid={`footer-social-${social.name.toLowerCase()}`}
                 >
-                  {getSocialIcon(social.icon)}
+                  <Icon size={18} />
                 </a>
-              ))}
-            </div>
-          </div>
-
-          <div className="footer-column">
-            <h3 className="footer-title">Navigation</h3>
-            <ul className="footer-links">
-              {navigationLinks.map((link) => (
-                <li key={link.path}>
-                  <Link to={link.path} className="footer-link">
-                    {link.name}
-                  </Link>
-                </li>
-              ))}
-              <li>
-                <Link to="/qui-sommes-nous" className="footer-link">
-                  Qui sommes-nous
-                </Link>
-              </li>
-              <li>
-                <Link to="/nos-engagements" className="footer-link">
-                  Nos Engagements
-                </Link>
-              </li>
-            </ul>
-          </div>
-
-          <div className="footer-column">
-            <h3 className="footer-title">Services</h3>
-            <ul className="footer-links">
-              <li>
-                <Link to="/rgpd" className="footer-link">
-                  RGPD & Conformité
-                </Link>
-              </li>
-              <li>
-                <Link to="/cybersecurite" className="footer-link">
-                  Cybersécurité
-                </Link>
-              </li>
-              <li>
-                <Link to="/infogerance" className="footer-link">
-                  Infogérance
-                </Link>
-              </li>
-              <li>
-                <a href="#audit" className="footer-link">
-                  Audit IT
-                </a>
-              </li>
-              <li>
-                <a href="#cloud" className="footer-link">
-                  Solutions Cloud
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          <div className="footer-column">
-            <h3 className="footer-title">Contact</h3>
-            <ul className="footer-contact">
-              <li>
-                <MapPin size={18} />
-                <span>{companyInfo.address}</span>
-              </li>
-              <li>
-                <Phone size={18} />
-                <a href={`tel:${companyInfo.phone}`}>{companyInfo.phone}</a>
-              </li>
-            </ul>
+              );
+            })}
           </div>
         </div>
 
-        <div className="footer-bottom">
-          <p className="copyright">
-            &copy; {new Date().getFullYear()} {companyInfo.name}. Tous droits réservés.
-          </p>
-          <div className="footer-bottom-links">
-            <Link to="/politique-de-confidentialite" className="footer-bottom-link">
-              Politique de confidentialité
-            </Link>
-            <Link to="/mentions-legales" className="footer-bottom-link">
-              Mentions légales
-            </Link>
-            <Link to="/politique-de-confidentialite" className="footer-bottom-link">
-              Cookies
-            </Link>
-          </div>
+        <div className="footer-column">
+          <h3 className="footer-title">Navigation</h3>
+          <ul className="footer-links">
+            {navColumn.map((link) => (
+              <li key={link.path}>
+                <Link to={link.path} className="footer-link" data-testid={`footer-link-${link.path.slice(1)}`}>
+                  {link.name}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <div className="footer-column">
+          <h3 className="footer-title">Informations légales</h3>
+          <ul className="footer-links">
+            {legalColumn.map((link) => (
+              <li key={link.path}>
+                <Link to={link.path} className="footer-link" data-testid={`footer-legal-${link.path.slice(1)}`}>
+                  {link.name}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <div className="footer-column">
+          <h3 className="footer-title">Contact</h3>
+          <ul className="footer-contact">
+            <li>
+              <MapPin size={18} />
+              <span>
+                {companyInfo.addressLines.map((line) => <React.Fragment key={line}>{line}<br /></React.Fragment>)}
+              </span>
+            </li>
+            <li>
+              <Phone size={18} />
+              <a href={`tel:${companyInfo.phoneHref}`} data-testid="footer-phone">{companyInfo.phone}</a>
+            </li>
+            <li>
+              <Mail size={18} />
+              <a href={`mailto:${companyInfo.email}`} data-testid="footer-email">{companyInfo.email}</a>
+            </li>
+          </ul>
+          <Link to="/contact" className="btn-primary footer-cta" data-testid="footer-contact-cta">
+            NOUS CONTACTER
+          </Link>
         </div>
       </div>
-    </footer>
-  );
-};
+
+      <div className="footer-bottom">
+        <p className="copyright">
+          © {new Date().getFullYear()} Symplicity | Tous droits réservés
+        </p>
+        <div className="footer-certifications">
+          <img src="/assets/certifications/logo_expert_cyber.png" alt="Label ExpertCyber" />
+          <img src="/assets/certifications/logo_cnil.png" alt="DPO certifié CNIL" />
+          <img src="/assets/certifications/logo_iso_27001.png" alt="ISO 27001" />
+        </div>
+      </div>
+    </div>
+  </footer>
+);
 
 export default Footer;

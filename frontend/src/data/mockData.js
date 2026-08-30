@@ -1,12 +1,21 @@
-// Mock data for Symplicity website
+// Contenus et médias officiels Symplicity (récupérés depuis le site d'origine)
 
 export const companyInfo = {
   name: "SYMPLICITY",
+  legalName: "Symplicity",
   tagline: "Services informatiques sur-mesure, créateurs de valeur pour votre entreprise",
   description: "Depuis 2007, nous fournissons des solutions, des produits informatiques et des conseils sur mesure, afin d'accompagner la croissance de nos clients au quotidien.",
   phone: "01 85 450 300",
+  phoneHref: "+33185450300",
   email: "contact@symplicity.fr",
-  address: "38 rue des Processions, 91240 Saint-Michel-Sur-Orge, FRANCE"
+  address: "38 rue des Processions, 91240 Saint-Michel-Sur-Orge, FRANCE",
+  addressLines: ["38 rue des Processions", "91240 Saint-Michel-Sur-Orge, FRANCE"],
+  siret: "49523209200025",
+  hours: [
+    { days: "Lundi au vendredi", time: "9h - 18h" },
+    { days: "Samedi", time: "8h - 12h" },
+    { days: "Dimanche", time: "Fermé" }
+  ]
 };
 
 export const navigationLinks = [
@@ -14,6 +23,7 @@ export const navigationLinks = [
   { name: "RGPD", path: "/rgpd" },
   { name: "Cybersécurité", path: "/cybersecurite" },
   { name: "Infogérance", path: "/infogerance" },
+  { name: "Actualités", path: "/actualites" },
   { name: "Contact", path: "/contact" }
 ];
 
@@ -49,33 +59,34 @@ export const services = [
 ];
 
 export const clientLogos = [
-  { id: 1, name: "Client 1", url: "https://static.wixstatic.com/media/3806eb_3a18f444dd0c4b41b8355f0b4d173bbb~mv2.png" },
-  { id: 2, name: "Client 2", url: "https://static.wixstatic.com/media/3806eb_56141989335d475a9a7519ab9d065e58~mv2.png" },
-  { id: 3, name: "Client 3", url: "https://static.wixstatic.com/media/3806eb_abedad1ef7534b5db6b786d3510eb636~mv2.png" },
-  { id: 4, name: "Client 4", url: "https://static.wixstatic.com/media/3806eb_a4c13019932a4ba3b113edfb7e8100e0~mv2.png" },
-  { id: 5, name: "Client 5", url: "https://static.wixstatic.com/media/3806eb_060e175f9bf94403af3589961b456196~mv2.png" },
-  { id: 6, name: "Client 6", url: "https://static.wixstatic.com/media/3806eb_0f9870b952ad4fecabec138a6bf05cb3~mv2.png" },
-  { id: 7, name: "Client 7", url: "https://static.wixstatic.com/media/3806eb_12b76e7571c14fbab919b08a150e4a7e~mv2.png" },
-  { id: 8, name: "Client 8", url: "https://static.wixstatic.com/media/3806eb_91da58a3d18f495aa8290e13fb409628~mv2.png" }
+  { id: 1, name: "Eiffage Route", url: "/assets/clients/logo_eiffage.png" },
+  { id: 2, name: "Commune de Ballainvilliers", url: "/assets/clients/logo_ballainvilliers.png" },
+  { id: 3, name: "Clinique de Grosbois", url: "/assets/clients/logo_clinique_de_grosbois.png" },
+  { id: 4, name: "Commune de Guignes", url: "/assets/clients/logo_guignes.png" },
+  { id: 5, name: "Commune de Fontenay-lès-Briis", url: "/assets/clients/logo_fontenay_les_briis.png" },
+  { id: 6, name: "Groupe BTL", url: "/assets/clients/logo_groupe_btl.png" },
+  { id: 7, name: "MLO", url: "/assets/clients/logo_mlo.png" },
+  { id: 8, name: "Client Symplicity", url: "/assets/clients/logo.png" }
 ];
 
 export const certifications = [
-  { id: 1, name: "Certification 1", url: "https://static.wixstatic.com/media/3806eb_388748ce5be74b0a8f5e5fa342b8bcf5~mv2.png" },
-  { id: 2, name: "ExpertCyber AFNOR", url: "https://static.wixstatic.com/media/3806eb_8b4a62ef465545e69b5eb2446016f800~mv2.png" },
-  { id: 3, name: "Certification 3", url: "https://static.wixstatic.com/media/3806eb_be58dbbeef714b77ae8895383e02f386~mv2.png" },
-  { id: 4, name: "ISO 27001", url: "https://static.wixstatic.com/media/3806eb_2f2dfbd355d444b9835b10e18db722fb~mv2.png" },
-  { id: 5, name: "DPO CNIL", url: "https://static.wixstatic.com/media/3806eb_b2356667ffb64b8598c12613e4ef0bf2~mv2.png" }
+  { id: 1, name: "Microsoft Certified Partner", url: "/assets/certifications/logo_microsoft.png" },
+  { id: 2, name: "ExpertCyber - AFNOR", url: "/assets/certifications/logo_expert_cyber.png" },
+  { id: 3, name: "ITIL", url: "/assets/certifications/logo_itil.png" },
+  { id: 4, name: "ISO 27001", url: "/assets/certifications/logo_iso_27001.png" },
+  { id: 5, name: "ISO 27005", url: "/assets/certifications/logo_iso_27005.png" },
+  { id: 6, name: "DPO certifié CNIL", url: "/assets/certifications/logo_cnil.png" }
 ];
 
 export const partnerLogos = [
-  { id: 1, name: "Starware", url: "https://static.wixstatic.com/media/0f2d93_d99037b24fef4926963235cd3ea7dd23~mv2.png" },
-  { id: 2, name: "Network", url: "https://static.wixstatic.com/media/0f2d93_943a66e152ea47f3914f3636271e1ce0~mv2.png" }
+  { id: 1, name: "Starware IT Services", url: "/assets/logo/logo-symplicity-horizontal.png" },
+  { id: 2, name: "Network-ing", url: "/assets/img/logo-networking.png" }
 ];
 
 export const testimonials = [
   {
     id: 1,
-    quote: "Symplicity m'a fait redécouvrir le sens du mot 'Service' ! Merci !",
+    quote: "Symplicity m'a fait redécouvrir le sens du mot « Service » ! Merci !",
     author: "Sébastien ROZIAK",
     company: "Eiffage Route"
   }
@@ -90,8 +101,8 @@ export const targetAudience = [
 export const aboutContent = {
   title: "QUI SOMMES-NOUS ?",
   description: "Depuis plus de 15 ans, Symplicity sert les TPE/PME et les collectivités locales, en veillant à leur proposer des solutions innovantes et créatrices de valeur dans le cycle de vie de leurs solutions informatiques.\n\nDepuis l'analyse des besoins jusqu'à l'infogérance avec une expertise dans les solutions Cloud, la cybersécurité et le RGPD, Symplicity se veut l'interlocuteur privilégié des structures de toutes tailles souhaitant externaliser leur DSI.\n\nPrestataire référence Cybermalveillance.Gouv.fr, nous avons été labellisés ExpertCyber par l'AFNOR en 2021.",
-  image: "https://static.wixstatic.com/media/3806eb_2052f0b119214ca5888e9436dfe1dbeb~mv2.jpg",
-  certificationLogo: "https://static.wixstatic.com/media/0f2d93_2546db1ae3054f9e9992f6c4f490dd88~mv2.png"
+  image: "/assets/photos/photo1.jpg",
+  certificationLogo: "/assets/certifications/cybermalveillance.png"
 };
 
 export const commitmentsContent = {

@@ -1,0 +1,259 @@
+##### nos-engagements.html
+HELP
+NOS ENGAGEMENTS
+Symplicity est une société engagée :
+​
+Dans les performances énergétiques de ses produits informatiques
+​
+Que ce soit en interne ou chez nos clients, nous mettons un point d'honneur à préconiser des produits informatiques aux performance énergétiques certifiées 80 Plus et/ou Energy Star, afin d’optimiser leur consommation électrique de manière efficace.
+De manière analogue, les onduleurs que nous préconisons ont un haut rendement énergétique (cos Phi).
+​
+En règle générale, nous favorisons également les solutions de constructeurs informatiques classés dans les dix premiers de la liste de Greenpeace.
+​
+Nous conseillons par ailleurs à tous nos utilisateurs de faire évoluer leur parc informatique vers Windows 11, qui permet une gestion intelligente et optimisée de la consommation électrique.
+​
+Par ailleurs, nous prenons en charge le recyclage des déchets informatiques pour nos clients :
+​
+En amenant régulièrement dans des plateformes écologiques,
+En utilisant des sociétés spécialisées dans la gestion et le traitement des déchets d’Équipement Électrique et Électroniques.
+​
+Enfin, afin de mieux accompagner nos clients tout en limitant notre impact carbone, nous utilisons régulièrement notre solution de prise de main à distance (PMAD), nous permettant de limiter nos déplacements.
+​
+Dans l'optimisation énergétique de ses bureaux
+​
+Nos bureaux sont équipés d'un éclairage totalement à LED.  Notre parc informatique est moderne, et répond aux dernières normes énergétiques. L'intégralité de nos écrans et de nos équipements réseaux est choisie pour sa basse consommation d'énergie.
+Enfin, notre infrastructure est dans le cloud afin de réduire le coût énergétique associé.
+​
+Par ailleurs, des rafraîchissements au niveau des installations électriques et de l'isolation des locaux ont lieu sur une base régulière, afin d'assurer une dépense énergétique minimale au niveau du chauffage ou de la climatisation des bureaux.
+​
+Dans le bien-être de ses collaborateurs
+​
+L’aspect sociétal du développement durable est également l'une de nos préoccupations majeures.
+​
+Afin de créer le meilleur environnement de travail possible pour ses salariés, Symplicity met à leur disposition des claviers ergonomiques bénéficiant de nouveaux matériaux d’amortissement, de barres d’équilibrage et de conceptions internes affinées pour atténuer le bruit des touches.
+​
+Les souris utilisées disposent de nouveaux switchs de clic, de patins à faible frottement et d’une conception interne améliorée, afin d'être également le plus silencieuses possible.
+​
+Les écrans fournis sont incurvés, permettant ainsi une captation de l'image beaucoup plus naturelle et, partant, un meilleur confort visuel des salariés.
+​
+Par ailleurs, Symplicity recrute régulièrement des apprentis, car nous pensons qu’une expérience pratique au cours des études est un gage certain d’un niveau de pratique favorisant l’embauche ultérieure. La transmission des savoirs et compétences est chez nous une valeur clé.
+​
+Symplicity
+travaille également à l’insertion de personnes en réorientation professionnelle en leur proposant des stages pratiques de découverte du métier informatique, en collaboration avec Pole Emploi.
+​
+Tous les employés de Symplicity suivent régulièrement des formations et des certifications avec nos fournisseurs logiciels et matériels, afin de les stimuler, d'accroître leurs compétences,  et de  proposer à nos clients le plus haut niveau de qualité de nos prestations.
+​
+Vous souhaitez en savoir plus sur l’engagement de notre société ?
+Pour tout renseignement complémentaire, contactez-nous au 01 80 85 60 81 ou via notre formulaire de contact.
+​
+NOUS CONTACTER
+
+##### rgpd.html
+HELP
+RGPD
+Qu’est-ce que le RGPD ?
+Le RGPD  est le « Règlement Général sur la Protection des Données » (en anglais « General Data Protection Regulation » ou GDPR). Entré en application le 25 mai 2018, le RGPD encadre le traitement des données personnelles des résidents européens.
+Ce nouveau règlement européen s’inscrit dans la continuité de la Loi française Informatique et Libertés de 1978 et renforce le contrôle par les citoyens de l’utilisation qui peut être faite des données les concernant.
+Il harmonise les règles en Europe en offrant un cadre juridique uniformisé aux professionnels.
+Qui est concerné par le RGPD ?
+Toute entité collectant et manipulant des données personnelles concernant des Européens doit s'y conformer, qu’il s’agisse d’une entreprise (Européenne ou non), d’un sous-traitant ou même d’une association.
+Ainsi, si vous traitez ou collectez des données pour le compte d’une autre entité (entreprise, collectivité, association), vous êtes soumis à des obligations spécifiques, destinées à garantir la protection des données qui vous sont confiées.
+Le montant des sanctions prévues en cas de manquements au RGPD peut aller jusqu’à 20 millions d’euros ou, dans le cas d’une entreprise, aller jusqu’à 4 % du chiffre d’affaires annuel mondial. Ces sanctions peuvent être rendues publiques.
+Se mettre en conformité RGPD avec Symplicity :
+Symplicity vous accompagne tout au long du processus de mise en conformité. Depuis l'audit de conformité jusqu'à la tenue de vos registres, en passant par les préconisations, la mise en place des référentiels et la sensibilisation de vos équipes aux bonnes pratiques RGPD, nos experts certifiés CNIL sauront vous aiguiller.
+​
+Vous souhaitez aborder le sujet de votre mise en conformité RGPD avec des experts qualifiés, certifiés et à l'écoute de vos enjeux métiers ?
+NOUS CONTACTER
+
+##### cybersecurite.html
+HELP
+CYBERSÉCURITE
+Notre cheval de bataille :
+sensibiliser
+les entreprises et collectivités locales aux problématiques de
+sécurité informatique
+, leur proposer des
+audits de sécurité
+de leurs installations et accompagner celles qui le souhaitent dans la démarche de
+sécurisation de leurs infrastructures IT
+.
+​
+Trop tard pour cela ? Vous êtes
+victime de cyber-attaque
+?
+Nos
+experts cyber vous viennent en aide !
+​
+La cyber sécurité, enjeu clé pour votre activité
+​
+Les cyberattaques visant des entreprises françaises ont quadruplé en 2020 par rapport à l’année précédente, selon l’Agence nationale de sécurité des systèmes d’information (ANSSI).
+Elles coûtent une fortune : 6 000 milliards de dollars dans le monde en 2021 et jusqu’à 10 500 milliards en 2025.
+​
+Les TPE/PME et petites communes, plus vulnérables, sont les principales
+cibles de ces attaques.
+Aujourd’hui plus que jamais, elles doivent pouvoir se protéger efficacement des menaces de sécurité informatique.
+​
+Pour faire face aux cybermenaces en forte croissance et de plus en plus sophistiquées, faute de DSI interne, elles doivent faire appel à des prestataires externes. Mais elles se heurtent souvent à trois écueils :
+1) Offres non adaptées à leur petite taille
+2) Budgets requis trop élevés
+3) Accompagnement peu pédagogue
+C’est pourquoi Symplicity a développé une offre complète de solutions et de services destinés à accompagner nos clients dans l’analyse, les préconisations et la mise en œuvre de leur cyber protection, tant d’un point de vue matériel, logiciel et processus, que dans leur maintien en condition opérationnelle.
+Enfin, puisqu’il est impossible de garantir une cyberdéfense à 100%, des prestations de remise en service et d’analyse forensique en cas d’attaque réussie sont également partie intégrante de notre offre cybersécurité.
+​
+Des services préventifs adaptés et efficaces
+• Audit Cyber d’infrastructure
+• Pentesting (Tests d’intrusion) : mode "Grey Hat" ou "White Hat"
+• Analyses de vulnérabilité : infrastructures IT et sites Web
+• Charte informatique : Définition et mise en place
+• PRA / PCA informatique : Analyse des besoins, déploiement, révisions ad hoc et tests annuels
+• Sensibilisation : Mise en place de campagne de phishing (audit de sensibilité pré et post formation)
+• RGPD : Analyse RGPD / PIA en vue d’une mise en conformité, révision annuelle (DPO Délégué certifié possible)
+• Contrats de maintenance et/ou infogérance IT incluant le volet cyberprotection
+​
+Des services réactifs / curatifs de pointe
+​
+Si besoin, notamment en cas d'attaque, nous vous proposons les services réactifs / curatifs suivants :
+• Remise en état des systèmes post incident
+• Récupération des données post incident
+• Analyse forensique (investigation numérique) post Incident
+​
+Des offres de sécurisation sur-mesure, adaptées à toutes tailles de structure
+Selon le nombre de postes à protéger, nous vous composerons une offre sur mesure incluant les éléments nécessaires parmi :
+• Firewall : Sophos
+• Antivirus/ Antimalware : Bitdefender
+• Protection des endpoints : Stack de sécurité embarquée dans les endpoints HP
+• Antispam : VadeSecure
+• Formation / sensibilisation à la cybersécurité : Plateforme de e-learning AwareGO, séminaires de formation et sensibilisation (employés, codir etc.)
+• Résilience / Sauvegarde : Acronis (sauvegardes locales et répliques dans le Cloud)
+mondial.
+​
+Symplicity, labellisée Expert Cyber par Cybermalveillance.gouv.fr
+Afin d'offrir aux entreprises et collectivités la garantie d’un accompagnement et d’une prise en charge de qualité, Cybermalveillance.gouv.fr a lancé, en mai 2020, le label ExpertCyber.
+​
+Gage de qualité, ce label est destiné à valoriser les professionnels en sécurité numérique ayant démontré un niveau d’expertise technique et de transparence dans les domaines de l’assistance et de l’accompagnement de leurs clients.
+​
+En reconnaissant l’expertise numérique des professionnels, le label ExpertCyber garantit un accompagnement de qualité et offre une meilleure lisibilité des prestations et services aux victimes d'attaques cyber.
+​
+Vous êtes victime de cyber-attaque ? Vous souhaitez prévenir ces attaques en abordant le sujet de la sécurisation de votre infrastructure IT avec des experts qualifiés ?
+Symplicity peut vous concevoir une offre sur-mesure, adaptée à votre budget ainsi qu'à vos enjeux métiers.
+NOUS CONTACTER
+
+##### infogerance.html
+HELP
+INFOGÉRANCE
+Vous ne souhaitez pas (ou n'avez pas les ressources pour) avoir une DSI interne ?
+Pas de panique : Symplicity se charge d'exploiter et optimiser votre parc informatique !
+​
+Avec plus de 15 ans d'expérience en la matière, Symplicity est spécialiste de l’infogérance informatique en Ile de France et intervient auprès de plusieurs typologies de clients (TPE, PME, Collectivités, Associations, Syndicats, Fédérations Professionnelles...)
+Symplicity vous propose un ensemble de services de gestion et maintenance de vos infrastructures et parc informatique.
+​
+Les avantages sont nombreux :
+​
+Du temps de gagné pour vous concentrer sur le
+développement
+de votre entreprise
+​
+Concentrez-vous sur vos objectifs, Symplicity prend soin de votre informatique.
+De même, en faisant appel à nous, offrez à vos collaborateurs une assistance technique réactive, afin que l'informatique ne soit jamais un frein à votre activité.
+Gagnez du temps en optant pour un interlocuteur unique pour tous vos sujets IT.
+​
+Une informatique créatrice de valeur
+​
+Faire de votre informatique un outil au service de votre activité est notre spécialité. Nous croyons à l'IT comme appui de votre activité, à l'informatique
+​
+Une infrastructure performante, adaptée à vos besoins
+​
+Après étude de vos besoins spécifiques (et éventuel audit de l'existant), nos spécialistes de l'informatique sur-mesure vous concocterons l'offre qui correspond à votre entreprise et ses enjeux métiers.
+​
+Une informatique en adéquation avec la règlementation (RGPD, entre autres)
+​
+Que ce soit pour concevoir une infrastructure IT directement conforme ou pour mettre en conformité une informatique déjà existante, Symplicity vous accompagne tout au long du processus.
+Symplicity vous propose également des prestation d'audit et de sensibilisation de vos équipes aux différentes bonnes pratiques cybersécurité et RGPD, pour une informatique conforme et sécurisée à tous niveaux.
+​
+Des coûts informatiques maîtrisés, et budgétisables
+​
+Sachez exactement combien vous coûte votre informatique à l'année, grâce à un contrat d'assistance annuel conforme à vos besoins IT.
+​
+Une équipe d'experts au service de votre informatique
+​
+Nos collaborateurs sont formés en permanence aux évolutions technologiques du métier, afin de vous proposer des services actuels et compétitifs.
+​
+Une informatique vertueuse et responsable, en phase avec vos engagements RSE
+​
+Nous veillons à vous équiper de matériel et logiciels vertueux, économes en énergie et responsables, afin de limiter l'impact environnemental de votre parc informatique et d'avoir une informatique en adéquation avec vos valeurs et engagements.
+​
+Vous envisagez l'externalisation de votre Direction Informatique ?
+Contactez-nous pour être rappelé et en discuter avec notre équipe dédiée !
+Nous aurons alors le plaisir de faire connaissance et de vous proposer la solution la plus adaptée à vos besoins.
+NOUS CONTACTER
+
+##### contact.html
+HELP
+CONTACTEZ-NOUS
+Prénom
+Nom de famille
+E-mail
+Téléphone
+Société
+Fonction
+Votre message ...
+ENVOYER
+Merci pour votre envoi !
+ADRESSE
+38 rue des Processions
+91240 Saint-Michel-Sur-Orge, FRANCE
+CONTACT
+01 85 450 300
+HORAIRES D'OUVERTURE
+Lundi au vendredi
+Samedi
+Dimanche
+9h - 18h
+8h - 12h
+Fermé
+
+##### mentions-legales.html
+HELP
+MENTIONS LÉGALES
+Éditeur et responsable de la publication
+​
+La société Starware IT  est l’éditeur de ce site.
+Adresse :
+5 avenue du Président Salvador Allende 91700 SAINTE-GENEVIEVE-DES-BOIS
+SIRET : 49523209200025
+Mail :
+[email protected]
+Toutes les informations de ce site sont la propriété exclusive de la société Starware IT.
+Hébergement du site
+​
+L’hébergement du site est assurée par Wix
+Contenu du site
+​
+Le contenu du site est composé par sa structure générale et les éléments le composant : textes, images, photos, plans et éléments multimédia. Toute représentation totale ou partielle de ce site et de son contenu, par quelque procédé que ce soit, sans autorisation préalable expresse de Starware IT Services, est interdite et constituerait une contrefaçon sanctionnée par les articles L335-2 et suivants du code de la propriété intellectuelle. Les images et les textes du site ne sont en aucun cas contractuels.
+Marques déposées
+​
+Toutes les marques déposées, les logos de la société Starware IT qui figurent sur ce site sont la propriété exclusive de la société Starware IT.
+Il est interdit de les utiliser, de les télécharger de manière définitive, de les reproduire ou de les diffuser de quelque manière que ce soit sans l’autorisation écrite préalable de la société Starware IT.
+
+##### politique-de-confidentialite.html
+HELP
+POLITIQUE DE CONFIDENTIALITÉ
+Informations transmises par un utilisateur
+​
+Toute information transmise par un utilisateur à la société Starware IT Services via ce site sera considérée comme non confidentielle. La société Starware IT Services pourra l’utiliser, l’archiver, la commercialiser notamment pour le développement de ses offres commerciales. Conformément aux articles 39 et suivants de la loi n° 78-17 du 6 janvier 1978 modifiée en 2004 relative à l’informatique, aux fichiers et aux libertés, toute personne peut obtenir communication et, le cas échéant, rectification ou suppression des informations la concernant.
+​
+Ce droit peut s’exercer en contactant l’éditeur du site
+[email protected]
+​
+Cookies
+​
+La société Starware IT Services se réserve le droit d’installer des Cookies lorsque vous visitez le site.
+L’utilisateur reconnait être informé de cette possibilité. La plupart des navigateurs vous donnent la possibilité d’accepter ou de refuser les Cookies, ou d’être prévenu en cas de Cookies pour les accepter ou les refuser au cas par cas. De même, les Cookies peuvent être supprimés de votre terminal à tout moment.
+
+##### rgpd-site.html
+HELP
+RGPD
+Dans le cadre du Règlement général sur la protection des données, vous pouvez nous demander la consultation, la modification ou la suppression des données que nous avons collectées sur vous en nous écrivant un message via le formulaire de contact ou à l'adresse
+[email protected]
+.
+
